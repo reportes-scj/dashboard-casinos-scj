@@ -1667,7 +1667,14 @@
     return s;
   }
 
-  function xlsxSheetXml(headers, rows, numericCols) {
+  function xlsxSheetXml(headers, rows, numericCols, colWidths) {
+    let colsXml = '';
+    if (colWidths) {
+      colsXml = '<cols>' + Object.keys(colWidths).map((ci) => {
+        const col1 = Number(ci) + 1;
+        return `<col min="${col1}" max="${col1}" width="${colWidths[ci]}" customWidth="1"/>`;
+      }).join('') + '</cols>';
+    }
     let rowsXml = `<row r="1">` + headers.map((h, ci) => (
       `<c r="${xlsxColLetter(ci)}1" t="inlineStr" s="1"><is><t xml:space="preserve">${xmlEsc(h)}</t></is></c>`
     )).join('') + `</row>`;
@@ -1684,15 +1691,15 @@
         return `<c r="${ref}" t="inlineStr"><is><t xml:space="preserve">${xmlEsc(str)}</t></is></c>`;
       }).join('') + `</row>`;
     });
-    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>${rowsXml}</sheetData></worksheet>`;
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">${colsXml}<sheetData>${rowsXml}</sheetData></worksheet>`;
   }
 
-  // sheets: [{name, headers, rows, numericCols:Set}] → Uint8Array de un .xlsx completo y válido.
+  // sheets: [{name, headers, rows, numericCols:Set, colWidths:{colIndex:width}}] → Uint8Array de un .xlsx completo y válido.
   function buildXlsxWorkbook(sheets) {
     const enc = new TextEncoder();
     const sheetFiles = sheets.map((sh, i) => ({
       name: `xl/worksheets/sheet${i + 1}.xml`,
-      data: enc.encode(xlsxSheetXml(sh.headers, sh.rows, sh.numericCols)),
+      data: enc.encode(xlsxSheetXml(sh.headers, sh.rows, sh.numericCols, sh.colWidths)),
     }));
     const contentTypes = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -1774,6 +1781,7 @@ ${sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.open
       headers: ['Casino', 'Holding', 'Año', 'Mes', 'Variable', 'Valor'],
       rows: filas,
       numericCols: new Set([5]),
+      colWidths: { 0: 28, 4: 22, 5: 18 },
     }]);
     descargarArchivo(`SCJ_datos_historicos_${new Date().toISOString().slice(0, 10)}.xlsx`, xlsx, XLSX_MIME);
   }

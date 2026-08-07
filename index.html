@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industria de Casinos SCJ · Reportabilidad Ejecutiva</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <span class="brand-mark">SCJ</span>
+    <div class="brand-text">
+      <h1>Industria de Casinos de Juego</h1>
+      <p>Ingresos Brutos y Visitas · Superintendencia de Casinos de Juego (Chile)</p>
+    </div>
+  </div>
+  <div class="topbar-controls">
+    <div class="value-toggle" role="group" aria-label="Tipo de valor monetario">
+      <button class="toggle-btn active" data-value-mode="nominal">Nominal</button>
+      <button class="toggle-btn" data-value-mode="real">Real (pesos actuales)</button>
+      <button class="toggle-btn" data-value-mode="uf">UF</button>
+      <button class="toggle-btn" data-value-mode="usd">USD</button>
+    </div>
+    <div class="period-select">
+      <label for="year-from">Desde</label>
+      <select id="year-from"></select>
+      <label for="year-to">Hasta</label>
+      <select id="year-to"></select>
+    </div>
+    <div class="period-select">
+      <label for="trend-from">Tendencia desde</label>
+      <select id="trend-from"><option value="">Automático</option></select>
+    </div>
+    <label class="period-select" for="chk-pandemia">
+      <input type="checkbox" id="chk-pandemia">
+      Excluir 2020–2021 (pandemia)
+    </label>
+    <button class="btn btn-secondary" id="btn-export-excel" type="button">Descargar datos históricos (Excel)</button>
+    <button class="btn btn-secondary" id="btn-adm" type="button">ADM</button>
+  </div>
+</header>
+
+<nav class="tabs" id="main-tabs">
+  <button class="tab-btn active" data-view="resumen">Resumen Ejecutivo</button>
+  <button class="tab-btn" data-view="industria">Industria</button>
+  <button class="tab-btn" data-view="holdings">Holdings</button>
+  <button class="tab-btn" data-view="casinos">Casinos</button>
+  <button class="tab-btn" data-view="equipamiento">Equipamiento</button>
+  <button class="tab-btn" data-view="datos">Datos y Actualización</button>
+  <button class="tab-btn" data-view="admin" id="tab-admin" style="display:none;">Administración</button>
+</nav>
+
+<main id="app">
+  <section id="view-resumen" class="view active"></section>
+  <section id="view-industria" class="view"></section>
+  <section id="view-holdings" class="view"></section>
+  <section id="view-casinos" class="view"></section>
+  <section id="view-equipamiento" class="view"></section>
+  <section id="view-datos" class="view"></section>
+  <section id="view-admin" class="view"></section>
+</main>
+
+<footer class="footer">
+  <p>Fuente: Superintendencia de Casinos de Juego (SCJ) · Deflactor IPC: OECD/FRED &amp; mindicador.cl</p>
+</footer>
+
+<script src="vendor/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

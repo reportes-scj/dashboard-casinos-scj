@@ -1,0 +1,4580 @@
+[
+  {
+    "anio": 2009,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 136,
+    "maquinas_azar": 392,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 47,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 34,
+      "Dados": 3
+    },
+    "bingo_mesas": 248,
+    "maquinas_azar": 736,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 357,
+    "maquinas_azar": 240,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 8,
+      "Dados": 1
+    },
+    "bingo_mesas": 296,
+    "maquinas_azar": 300,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Casino de Juego de Rinconada",
+    "mesas_total": 13,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 200,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 83,
+    "mesas_por_tipo": {
+      "Ruleta": 29,
+      "Cartas": 51,
+      "Dados": 3
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1543,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 400,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Termas de Chillán",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 3,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 100,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 38,
+      "Dados": 2
+    },
+    "bingo_mesas": 336,
+    "maquinas_azar": 838,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 200,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 352,
+    "maquinas_azar": 580,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 380,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 108,
+    "maquinas_azar": 292,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2009,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 348,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 136,
+    "maquinas_azar": 404,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 46,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 33,
+      "Dados": 3
+    },
+    "bingo_mesas": 248,
+    "maquinas_azar": 736,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 357,
+    "maquinas_azar": 266,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 296,
+    "maquinas_azar": 300,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 9,
+      "Cartas": 39,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 904,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 85,
+    "mesas_por_tipo": {
+      "Ruleta": 28,
+      "Cartas": 54,
+      "Dados": 3
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1569,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 400,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Termas de Chillán",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 3,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 100,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 38,
+      "Dados": 2
+    },
+    "bingo_mesas": 336,
+    "maquinas_azar": 895,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 200,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 352,
+    "maquinas_azar": 580,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 380,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 108,
+    "maquinas_azar": 296,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2010,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 360,
+    "fuente_tabla": "Tabla N°5, pág. 11",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 136,
+    "maquinas_azar": 408,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 43,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 30,
+      "Dados": 3
+    },
+    "bingo_mesas": 248,
+    "maquinas_azar": 790,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 310,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 304,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 54,
+    "mesas_por_tipo": {
+      "Ruleta": 11,
+      "Cartas": 42,
+      "Dados": 1
+    },
+    "bingo_mesas": 160,
+    "maquinas_azar": 1424,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 83,
+    "mesas_por_tipo": {
+      "Ruleta": 29,
+      "Cartas": 52,
+      "Dados": 2
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1607,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Casino Colchagua",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 459,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Termas de Chillán",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 3,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 100,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 38,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1219,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 200,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 352,
+    "maquinas_azar": 580,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 380,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 308,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2011,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 150,
+    "maquinas_azar": 386,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 136,
+    "maquinas_azar": 440,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 41,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 29,
+      "Dados": 2
+    },
+    "bingo_mesas": 248,
+    "maquinas_azar": 770,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 338,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 322,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 55,
+    "mesas_por_tipo": {
+      "Ruleta": 12,
+      "Cartas": 42,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1388,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 84,
+    "mesas_por_tipo": {
+      "Ruleta": 30,
+      "Cartas": 53,
+      "Dados": 1
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1694,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Casino Colchagua",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 12,
+      "Dados": 1
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 459,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Termas de Chillán",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 3,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 100,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 34,
+      "Dados": 1
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1337,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 200,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 312,
+    "maquinas_azar": 597,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 200,
+    "maquinas_azar": 383,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 321,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 72,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 150,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2012,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 150,
+    "maquinas_azar": 400,
+    "fuente_tabla": "Tabla N°4, pág. 9",
+    "notas": "mesas_total calculado como suma de Ruleta+Cartas+Dados (el informe de este año no incluye columna 'Total' de mesas)."
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 136,
+    "maquinas_azar": 452,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 41,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 29,
+      "Dados": 2
+    },
+    "bingo_mesas": 248,
+    "maquinas_azar": 790,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 23,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 17,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 385,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 335,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 57,
+    "mesas_por_tipo": {
+      "Ruleta": 14,
+      "Cartas": 42,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1388,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 83,
+    "mesas_por_tipo": {
+      "Ruleta": 30,
+      "Cartas": 52,
+      "Dados": 1
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1918,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Casino Colchagua",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 238,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 12,
+      "Dados": 1
+    },
+    "bingo_mesas": 69,
+    "maquinas_azar": 450,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Termas de Chillán",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 3,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 100,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 34,
+      "Dados": 1
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1395,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 200,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 622,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 380,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 331,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 72,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 150,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2013,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 150,
+    "maquinas_azar": 423,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 136,
+    "maquinas_azar": 452,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 40,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 28,
+      "Dados": 2
+    },
+    "bingo_mesas": 124,
+    "maquinas_azar": 788,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 23,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 17,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 385,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 335,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 59,
+    "mesas_por_tipo": {
+      "Ruleta": 14,
+      "Cartas": 44,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1380,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Sun Monticello",
+    "mesas_total": 80,
+    "mesas_por_tipo": {
+      "Ruleta": 28,
+      "Cartas": 51,
+      "Dados": 1
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1869,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": "Termas de Chillán cesó operaciones el 03-10-2013; no aparece en el informe 2014."
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Casino Colchagua",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 248,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 452,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 11,
+      "Cartas": 38,
+      "Dados": 1
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1375,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 203,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 636,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 383,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 333,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 72,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 156,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2014,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 130,
+    "maquinas_azar": 426,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 466,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 41,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 29,
+      "Dados": 2
+    },
+    "bingo_mesas": 124,
+    "maquinas_azar": 794,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 23,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 17,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 385,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 342,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 59,
+    "mesas_por_tipo": {
+      "Ruleta": 14,
+      "Cartas": 44,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1368,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 81,
+    "mesas_por_tipo": {
+      "Ruleta": 28,
+      "Cartas": 52,
+      "Dados": 1
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 1915,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": "Tabla N°4 de este informe usa el nombre 'Monticello Grand Casino'; el texto narrativo del mismo informe usa 'Sun Monticello' -- inconsistencia interna del documento SCJ 2015."
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 240,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino de Juego Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 452,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Marina del Sol",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 11,
+      "Cartas": 38,
+      "Dados": 1
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1377,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino Gran Los Angeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 203,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 665,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 383,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Casino Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 333,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 72,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 168,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2015,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 460,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 474,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 42,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 30,
+      "Dados": 2
+    },
+    "bingo_mesas": 124,
+    "maquinas_azar": 842,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 26,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 19,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 405,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 13,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 7,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": "Renombrados este año: 'Casino Sol Calama'->'Marina del Sol Calama', 'Marina del Sol'->'Marina del Sol Talcahuano', 'Casino Sol Osorno'->'Marina del Sol Osorno'. Nuevo entrante: Ovalle Casino & Resort (primer año de operación)."
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 347,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 57,
+    "mesas_por_tipo": {
+      "Ruleta": 14,
+      "Cartas": 42,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1380,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 80,
+    "mesas_por_tipo": {
+      "Ruleta": 28,
+      "Cartas": 51,
+      "Dados": 1
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 2124,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 240,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Casino de Juego Talca",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 472,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 12,
+      "Cartas": 37,
+      "Dados": 1
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1403,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 10,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 208,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 705,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 413,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 14,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 337,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 230,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 168,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2016,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 497,
+    "fuente_tabla": "Tabla N°4, pág. 12",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": 12,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 7,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 352,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": "Primer año de operación de Casino Luckia Arica."
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 498,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 41,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 29,
+      "Dados": 2
+    },
+    "bingo_mesas": 124,
+    "maquinas_azar": 890,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 15,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 425,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 7,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 238,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 353,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Casino Rinconada",
+    "mesas_total": 59,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 43,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1209,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": "DISCREPANCIA: el texto narrativo de este informe indica 1.259 máquinas de azar para 'Casino Rinconada', pero la Tabla N°3 (fuente usada aquí) registra 1.209. Se usa el valor de la tabla por ser la fuente estructurada."
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Monticello Grand Casino",
+    "mesas_total": 89,
+    "mesas_por_tipo": {
+      "Ruleta": 30,
+      "Cartas": 58,
+      "Dados": 1
+    },
+    "bingo_mesas": 300,
+    "maquinas_azar": 2325,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": "DISCREPANCIA: el texto narrativo de este informe indica 2.373 máquinas de azar para 'Sun Monticello', pero la Tabla N°3 (fuente usada aquí) registra 2.325. Se usa el valor de la tabla por ser la fuente estructurada."
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 262,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Casino de Juego Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 470,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 12,
+      "Cartas": 36,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1407,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Casino Gran Los Angeles",
+    "mesas_total": 12,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 7,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 210,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 740,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 428,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 356,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 252,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 194,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2017,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 502,
+    "fuente_tabla": "Tabla N°3, pág. 9-10",
+    "notas": ""
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 352,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 68,
+    "maquinas_azar": 465,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 124,
+    "maquinas_azar": 780,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 179,
+    "maquinas_azar": 391,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 255,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 351,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 1030,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Primer año de operación de Enjoy Santiago."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Sun Monticello",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 300,
+    "maquinas_azar": 1963,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 30,
+    "maquinas_azar": 238,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 68,
+    "maquinas_azar": 404,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 168,
+    "maquinas_azar": 1389,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 40,
+    "maquinas_azar": 206,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Dreams Temuco",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 176,
+    "maquinas_azar": 731,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Dreams Valdivia",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 434,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 400,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 36,
+    "maquinas_azar": 246,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Dreams Coyhaique",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 38,
+    "maquinas_azar": 206,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Dreams Punta Arenas",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 499,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Arica",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 371,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Dreams Iquique",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 729,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 919,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 1500,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 453,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino Dreams Puerto Varas",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 453,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2018,
+    "casino_informe": "Casino de Puerto Natales",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 125,
+    "fuente_tabla": "Tabla N°5, pág. 16-17",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Primer año en que la SCJ reporta datos de casinos municipales en este informe."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 347,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 484,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 124,
+    "maquinas_azar": 783,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 179,
+    "maquinas_azar": 396,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 253,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 347,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 997,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Sun Monticello",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 300,
+    "maquinas_azar": 1993,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 30,
+    "maquinas_azar": 239,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 68,
+    "maquinas_azar": 406,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 96,
+    "maquinas_azar": 458,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Marina del Sol Chillán abrió el 30-07-2019 (primer año de operación)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 168,
+    "maquinas_azar": 1374,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 40,
+    "maquinas_azar": 220,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Dreams Temuco",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 176,
+    "maquinas_azar": 635,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Dreams Valdivia",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 434,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 399,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 36,
+    "maquinas_azar": 245,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Dreams Coyhaique",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 38,
+    "maquinas_azar": 208,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Dreams Punta Arenas",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 499,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Municipal de Arica",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 371,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Dreams Iquique",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 634,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 919,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 1500,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 466,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Dreams Puerto Varas",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 461,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2019,
+    "casino_informe": "Casino Municipal Puerto Natales",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 125,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 353,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 483,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 124,
+    "maquinas_azar": 749,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 179,
+    "maquinas_azar": 397,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 256,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 353,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 998,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Sun Monticello",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 250,
+    "maquinas_azar": 2326,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 30,
+    "maquinas_azar": 266,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 68,
+    "maquinas_azar": 419,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 96,
+    "maquinas_azar": 458,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 168,
+    "maquinas_azar": 1373,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 20,
+    "maquinas_azar": 220,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Dreams Temuco",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 176,
+    "maquinas_azar": 639,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Dreams Valdivia",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 470,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 60,
+    "maquinas_azar": 399,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 36,
+    "maquinas_azar": 246,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Dreams Coyhaique",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 38,
+    "maquinas_azar": 226,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Dreams Punta Arenas",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 100,
+    "maquinas_azar": 514,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Municipal de Arica",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 371,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Dreams Iquique",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 644,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 919,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 148,
+    "maquinas_azar": 1500,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 464,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Dreams Puerto Varas",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 458,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2020,
+    "casino_informe": "Casino Municipal Puerto Natales",
+    "mesas_total": null,
+    "mesas_por_tipo": null,
+    "bingo_mesas": 0,
+    "maquinas_azar": 125,
+    "fuente_tabla": "Tabla N°5, pág. 13-14",
+    "notas": "Este informe reporta SOLO posiciones de juego (capacidad máxima de personas jugando simultáneamente), no el conteo físico de mesas por categoría; por eso mesas_total y mesas_por_tipo se dejan en null. El valor de maquinas_azar SÍ se considera confiable porque cada máquina de azar ocupa exactamente 1 posición (verificado cruzando tablas de años donde el informe reporta ambos conteos, ej. 2009 y 2013-2017: el N° de posiciones de máquinas de azar siempre coincide exactamente con el N° físico de máquinas). bingo_mesas corresponde a posiciones de bingo, no a mesas/salas físicas, consistente con todos los demás años del dataset. ALERTA DE FECHA: la tabla de este informe está titulada 'año 2019' pero el corte de datos real es al 18-03-2020 (pre-cierre por pandemia), según el texto del informe 2020. No representa el cierre de diciembre 2020. Casino municipal (concesión municipal, fuera del régimen Ley 19.995)."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 352,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 280."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 489,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 419."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 26,
+      "Dados": 2
+    },
+    "bingo_mesas": 124,
+    "maquinas_azar": 749,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 580."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 391,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 297."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 256,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 215."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 12,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 378,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 314."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Enjoy Viña",
+    "mesas_total": 66,
+    "mesas_por_tipo": {
+      "Ruleta": 17,
+      "Cartas": 47,
+      "Dados": 2
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 1199,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 946. Transita desde el régimen municipal al régimen Ley 19.995 durante 2021 (antes reportado como 'Enjoy Viña del Mar' municipal)."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": 60,
+    "mesas_por_tipo": {
+      "Ruleta": 19,
+      "Cartas": 40,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1171,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 822."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Casino Monticello",
+    "mesas_total": 81,
+    "mesas_por_tipo": {
+      "Ruleta": 25,
+      "Cartas": 54,
+      "Dados": 2
+    },
+    "bingo_mesas": 250,
+    "maquinas_azar": 2340,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 1436."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 275,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 172."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 419,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 295."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 96,
+    "maquinas_azar": 459,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 455."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 12,
+      "Cartas": 36,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1068,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 1018."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 3,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 20,
+    "maquinas_azar": 206,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 190."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 644,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 522."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 467,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 351."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 415,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 319."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 246,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 141."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 215,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 174."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 514,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Máquinas de azar con movimiento (activas): 456."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Arica",
+    "mesas_total": 6,
+    "mesas_por_tipo": {
+      "Ruleta": 2,
+      "Cartas": 4,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 191,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' de forma desagregada para casinos municipales."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Iquique",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 418,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' de forma desagregada para casinos municipales."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Coquimbo",
+    "mesas_total": 25,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 20,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 476,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' de forma desagregada para casinos municipales."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Pucón",
+    "mesas_total": 23,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 18,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 439,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' de forma desagregada para casinos municipales."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Puerto Varas",
+    "mesas_total": 12,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 7,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 304,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' de forma desagregada para casinos municipales."
+  },
+  {
+    "anio": 2021,
+    "casino_informe": "Natales",
+    "mesas_total": 3,
+    "mesas_por_tipo": {
+      "Ruleta": 1,
+      "Cartas": 2,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 105,
+    "fuente_tabla": "Tabla N°6, pág. 18",
+    "notas": "A partir de este informe la SCJ vuelve a reportar el conteo FÍSICO de mesas por categoría (no solo posiciones). Se agrega la columna 'Máquinas de Azar con movimiento' (máquinas activas/con apuestas), distinta del total de máquinas instaladas. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' de forma desagregada para casinos municipales."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 360,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 322."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 453,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 444."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 40,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 28,
+      "Dados": 2
+    },
+    "bingo_mesas": 124,
+    "maquinas_azar": 749,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 637."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 12,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 7,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 411,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 371."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 264,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 230."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": 39,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 48,
+    "maquinas_azar": 820,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 770. Transita desde el régimen municipal al régimen Ley 19.995 durante 2022."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 324,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 317."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": 64,
+    "mesas_por_tipo": {
+      "Ruleta": 17,
+      "Cartas": 45,
+      "Dados": 2
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 1233,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 1111."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": 54,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 38,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1056,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 821."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Casino Monticello",
+    "mesas_total": 80,
+    "mesas_por_tipo": {
+      "Ruleta": 24,
+      "Cartas": 54,
+      "Dados": 2
+    },
+    "bingo_mesas": 250,
+    "maquinas_azar": 2278,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 1563."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 19,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 278,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 199."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 419,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 400."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 96,
+    "maquinas_azar": 458,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 461."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 12,
+      "Cartas": 36,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1195,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 1167."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 8,
+    "mesas_por_tipo": {
+      "Ruleta": 2,
+      "Cartas": 5,
+      "Dados": 1
+    },
+    "bingo_mesas": 20,
+    "maquinas_azar": 214,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 206."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 679,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 595."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": 27,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 18,
+      "Dados": 1
+    },
+    "bingo_mesas": 24,
+    "maquinas_azar": 500,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 500. Transita desde el régimen municipal al régimen Ley 19.995 durante 2022."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 428,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 384."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 443,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 356."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 16,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 246,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 208."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 211,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 172."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 538,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Máquinas de azar con movimiento (activas): 492."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Iquique",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 491,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). La concesión municipal de Arica fue dejada sin efecto por fallo de la Corte Suprema, por lo que ya no aparece en este listado."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Puerto Varas",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 351,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). La concesión municipal de Arica fue dejada sin efecto por fallo de la Corte Suprema, por lo que ya no aparece en este listado."
+  },
+  {
+    "anio": 2022,
+    "casino_informe": "Natales",
+    "mesas_total": 3,
+    "mesas_por_tipo": {
+      "Ruleta": 1,
+      "Cartas": 2,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 119,
+    "fuente_tabla": "Tabla N°6, pág. 14 (archivo fuente: Informe-Anual-de-la-Industria-2023.pdf)",
+    "notas": "HALLAZGO IMPORTANTE: el archivo 'Informe-Anual-de-la-Industria-2023.pdf' está MAL ETIQUETADO -- su contenido corresponde en realidad al cierre de diciembre de 2022 (confirmado por el título de la Tabla N°6: 'diciembre 2022' y por el texto narrativo del informe que dice 'Durante 2022...'). Por lo tanto estos registros se cargan como anio=2022, no 2023. Esto también resuelve el vacío de 2022 mencionado en el encargo original: SÍ existe información de 2022, solo que bajo un nombre de archivo equivocado. Casino municipal (concesión municipal, fuera del régimen Ley 19.995). La concesión municipal de Arica fue dejada sin efecto por fallo de la Corte Suprema, por lo que ya no aparece en este listado."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 377,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 361."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 424,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 422."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 40,
+    "mesas_por_tipo": {
+      "Ruleta": 9,
+      "Cartas": 28,
+      "Dados": 3
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 817,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 708."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 440,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 445."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 264,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 227."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": 39,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 48,
+    "maquinas_azar": 1026,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 942."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 336,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 310."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": 64,
+    "mesas_por_tipo": {
+      "Ruleta": 17,
+      "Cartas": 45,
+      "Dados": 2
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 1308,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 1231."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": 52,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 36,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1070,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 779."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Casino Monticello",
+    "mesas_total": 82,
+    "mesas_por_tipo": {
+      "Ruleta": 26,
+      "Cartas": 54,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 1810,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 1811. Nota: la 'bingo' cae de 250 (2022) a 30 (2023); verificar si corresponde a cierre parcial de sala de bingo o cambio de reporte -- no se pudo confirmar con el texto del informe."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 308,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 238."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 419,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 402."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 96,
+    "maquinas_azar": 450,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 446."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 50,
+    "mesas_por_tipo": {
+      "Ruleta": 12,
+      "Cartas": 36,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1382,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 1379."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 2,
+      "Cartas": 8,
+      "Dados": 1
+    },
+    "bingo_mesas": 20,
+    "maquinas_azar": 241,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 223."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 692,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 664."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": 27,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 18,
+      "Dados": 1
+    },
+    "bingo_mesas": 24,
+    "maquinas_azar": 508,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 504."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 391,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 389."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 483,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 407."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 2
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 284,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 226."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 176,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 176."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 525,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Máquinas de azar con movimiento (activas): 509."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Iquique",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 500,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' desagregada para casinos municipales."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Puerto Varas",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 365,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' desagregada para casinos municipales."
+  },
+  {
+    "anio": 2023,
+    "casino_informe": "Natales",
+    "mesas_total": 3,
+    "mesas_por_tipo": {
+      "Ruleta": 1,
+      "Cartas": 2,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 119,
+    "fuente_tabla": "Tabla N°5, pág. 12-13 (archivo: Informe-Anual-de-la-Industria-Ano_2023-1.pdf)",
+    "notas": "Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Este informe no reporta 'Máquinas de Azar con movimiento' desagregada para casinos municipales."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 389,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 498,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 39,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 28,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 849,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 8,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 440,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 39,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 48,
+    "maquinas_azar": 1029,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'. POSIBLE ERROR DE ETIQUETADO EN LA FUENTE: los valores reportados para 'Ovalle Casino & Resort' y 'Enjoy Coquimbo' en la Tabla N°12 de 2024 aparecen intercambiados respecto de la serie histórica: 'Ovalle' salta a 1.029 máquinas (perfil típico de Coquimbo, que veía ~900-1.100) mientras 'Enjoy Coquimbo' cae a 262 (perfil típico de Ovalle, que veía ~230-280). Se transcriben los valores tal como aparecen en la tabla del informe (sin corregir), dejando constancia de la sospecha de swap para validación del usuario."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 262,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'. POSIBLE ERROR DE ETIQUETADO EN LA FUENTE: los valores reportados para 'Ovalle Casino & Resort' y 'Enjoy Coquimbo' en la Tabla N°12 de 2024 aparecen intercambiados respecto de la serie histórica: 'Ovalle' salta a 1.029 máquinas (perfil típico de Coquimbo, que veía ~900-1.100) mientras 'Enjoy Coquimbo' cae a 262 (perfil típico de Ovalle, que veía ~230-280). Se transcriben los valores tal como aparecen en la tabla del informe (sin corregir), dejando constancia de la sospecha de swap para validación del usuario."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 344,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": 66,
+    "mesas_por_tipo": {
+      "Ruleta": 17,
+      "Cartas": 46,
+      "Dados": 3
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 1309,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": 53,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 37,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1154,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Casino Monticello",
+    "mesas_total": 82,
+    "mesas_por_tipo": {
+      "Ruleta": 26,
+      "Cartas": 54,
+      "Dados": 2
+    },
+    "bingo_mesas": 250,
+    "maquinas_azar": 2492,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 307,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 531,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 15,
+      "Dados": 1
+    },
+    "bingo_mesas": 96,
+    "maquinas_azar": 477,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 9,
+      "Cartas": 25,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1396,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 12,
+    "mesas_por_tipo": {
+      "Ruleta": 2,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 20,
+    "maquinas_azar": 223,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 785,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": 27,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 18,
+      "Dados": 1
+    },
+    "bingo_mesas": 24,
+    "maquinas_azar": 508,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 455,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 490,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 2
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 296,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 219,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 554,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Este informe ya no incluye la columna 'Máquinas de Azar con movimiento'."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Iquique",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": null,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "PROBLEMA DE CALIDAD DE DATO: el valor de máquinas de azar reportado en la tabla para este casino municipal es implausible comparado con la serie histórica (ej. Iquique venía de ~500-650, Puerto Varas de ~350-460, y saltan a 5.059 y 6.588 respectivamente). Además, el subtotal municipal de la tabla (11.748) no concuerda con el texto narrativo del informe, que indica un total municipal de 8.052 máquinas. Se deja maquinas_azar en null para este casino por no poder determinarse con confianza."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Puerto Varas",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": null,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "PROBLEMA DE CALIDAD DE DATO: el valor de máquinas de azar reportado en la tabla para este casino municipal es implausible comparado con la serie histórica (ej. Iquique venía de ~500-650, Puerto Varas de ~350-460, y saltan a 5.059 y 6.588 respectivamente). Además, el subtotal municipal de la tabla (11.748) no concuerda con el texto narrativo del informe, que indica un total municipal de 8.052 máquinas. Se deja maquinas_azar en null para este casino por no poder determinarse con confianza."
+  },
+  {
+    "anio": 2024,
+    "casino_informe": "Natales",
+    "mesas_total": 3,
+    "mesas_por_tipo": {
+      "Ruleta": 1,
+      "Cartas": 2,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 102,
+    "fuente_tabla": "Tabla N°12, pág. 39",
+    "notas": "Casino municipal (concesión municipal, fuera del régimen Ley 19.995). Valor de máquinas de azar (102) es consistente con la serie histórica y se mantiene."
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Casino Luckia Arica",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 10,
+      "Dados": 2
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 389,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Marina del Sol Calama",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 2
+    },
+    "bingo_mesas": 68,
+    "maquinas_azar": 498,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Enjoy Antofagasta",
+    "mesas_total": 39,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 28,
+      "Dados": 1
+    },
+    "bingo_mesas": 40,
+    "maquinas_azar": 849,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Antay Casino & Hotel",
+    "mesas_total": 14,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 8,
+      "Dados": 1
+    },
+    "bingo_mesas": 179,
+    "maquinas_azar": 440,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Ovalle Casino & Resort",
+    "mesas_total": 39,
+    "mesas_por_tipo": {
+      "Ruleta": 10,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 48,
+    "maquinas_azar": 1029,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Enjoy Coquimbo",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 262,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Casino de Juegos del Pacífico",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 148,
+    "maquinas_azar": 344,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Enjoy Viña del Mar",
+    "mesas_total": 66,
+    "mesas_por_tipo": {
+      "Ruleta": 17,
+      "Cartas": 46,
+      "Dados": 3
+    },
+    "bingo_mesas": 80,
+    "maquinas_azar": 1309,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Enjoy Santiago",
+    "mesas_total": 53,
+    "mesas_por_tipo": {
+      "Ruleta": 15,
+      "Cartas": 37,
+      "Dados": 1
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 1154,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Casino Monticello",
+    "mesas_total": 82,
+    "mesas_por_tipo": {
+      "Ruleta": 26,
+      "Cartas": 54,
+      "Dados": 2
+    },
+    "bingo_mesas": 250,
+    "maquinas_azar": 2492,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Casino de Colchagua",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 14,
+      "Dados": 2
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 307,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Gran Casino de Talca",
+    "mesas_total": 15,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 10,
+      "Dados": 1
+    },
+    "bingo_mesas": 30,
+    "maquinas_azar": 531,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Marina del Sol Chillán",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 15,
+      "Dados": 1
+    },
+    "bingo_mesas": 96,
+    "maquinas_azar": 477,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Marina del Sol Talcahuano",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 9,
+      "Cartas": 25,
+      "Dados": 2
+    },
+    "bingo_mesas": 168,
+    "maquinas_azar": 1396,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Casino Gran Los Ángeles",
+    "mesas_total": 12,
+    "mesas_por_tipo": {
+      "Ruleta": 2,
+      "Cartas": 9,
+      "Dados": 1
+    },
+    "bingo_mesas": 20,
+    "maquinas_azar": 223,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Dreams Temuco",
+    "mesas_total": 36,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 26,
+      "Dados": 3
+    },
+    "bingo_mesas": 176,
+    "maquinas_azar": 785,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Enjoy Pucón",
+    "mesas_total": 27,
+    "mesas_por_tipo": {
+      "Ruleta": 8,
+      "Cartas": 18,
+      "Dados": 1
+    },
+    "bingo_mesas": 24,
+    "maquinas_azar": 508,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Dreams Valdivia",
+    "mesas_total": 22,
+    "mesas_por_tipo": {
+      "Ruleta": 5,
+      "Cartas": 15,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 455,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Marina del Sol Osorno",
+    "mesas_total": 21,
+    "mesas_por_tipo": {
+      "Ruleta": 7,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 60,
+    "maquinas_azar": 490,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Enjoy Chiloé",
+    "mesas_total": 17,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 11,
+      "Dados": 2
+    },
+    "bingo_mesas": 36,
+    "maquinas_azar": 296,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Dreams Coyhaique",
+    "mesas_total": 11,
+    "mesas_por_tipo": {
+      "Ruleta": 4,
+      "Cartas": 6,
+      "Dados": 1
+    },
+    "bingo_mesas": 38,
+    "maquinas_azar": 219,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Dreams Punta Arenas",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 12,
+      "Dados": 2
+    },
+    "bingo_mesas": 100,
+    "maquinas_azar": 554,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Iquique",
+    "mesas_total": 20,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 13,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 583,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Puerto Varas",
+    "mesas_total": 18,
+    "mesas_por_tipo": {
+      "Ruleta": 6,
+      "Cartas": 11,
+      "Dados": 1
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 366,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  },
+  {
+    "anio": 2025,
+    "casino_informe": "Natales",
+    "mesas_total": 3,
+    "mesas_por_tipo": {
+      "Ruleta": 1,
+      "Cartas": 2,
+      "Dados": 0
+    },
+    "bingo_mesas": 0,
+    "maquinas_azar": 102,
+    "fuente_tabla": "Tabla N°12, pág. 35, Informe Anual de la Industria 2025 (SCJ)",
+    "notas": null
+  }
+]

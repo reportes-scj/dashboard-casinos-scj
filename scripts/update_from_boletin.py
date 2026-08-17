@@ -240,6 +240,9 @@ def main():
 
     if not monthly:
         print("No se encontraron boletines mensuales en scj.gob.cl. Nada que hacer.")
+        if not args.dry_run:
+            payload["last_checked"] = hoy.strftime("%Y-%m-%d")
+            DATA_PATH.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         return 0
 
     monthly.sort()
@@ -255,6 +258,12 @@ def main():
 
     if mes <= último_en_datos:
         print("Los datos ya están al día. No se requiere actualización.")
+        # Igual dejamos constancia de que hoy se verificó contra scj.cl, aunque no haya
+        # cambios en los indicadores: el pie de página del dashboard usa este campo para
+        # mostrar la fecha de la última verificación automática.
+        if not args.dry_run:
+            payload["last_checked"] = hoy.strftime("%Y-%m-%d")
+            DATA_PATH.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         return 0
 
     print(f"Descargando y procesando boletín de {MESES_ES[mes-1]} {año}...")
@@ -305,8 +314,10 @@ def main():
         print("(--dry-run) No se escribió data/scj_data.json.")
         return 0
 
+    payload["last_checked"] = hoy.strftime("%Y-%m-%d")
     if n_new == 0 and n_changed == 0:
-        print("No hubo cambios reales que escribir.")
+        print("No hubo cambios reales que escribir (solo se actualiza la fecha de verificación).")
+        DATA_PATH.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         return 0
 
     payload["generated_at"] = hoy.strftime("%Y-%m-%d")

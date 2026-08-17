@@ -2469,11 +2469,33 @@ ${sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.open
     if (!y || !m || !d) return iso;
     return `${d} de ${MONTHS_ES_FULL[m - 1]} de ${y}`;
   }
+  function ultimoPeriodoConDatos() {
+    // Último Año/Mes con Win Total efectivamente informado (no proyectado), para mostrar
+    // "información disponible hasta <mes> de <año>" junto a la fecha de verificación.
+    if (!RAW || !Array.isArray(RAW.records)) return null;
+    let mejor = null;
+    for (const r of RAW.records) {
+      if (r.Indicador !== 'Win Total' || r.Valor == null) continue;
+      if (!mejor || r.Año > mejor.Año || (r.Año === mejor.Año && r.Mes > mejor.Mes)) {
+        mejor = { Año: r.Año, Mes: r.Mes };
+      }
+    }
+    return mejor;
+  }
   function renderFooterActualizacion() {
     const el = document.getElementById('footer-actualizacion');
-    if (el && RAW && RAW.generated_at) {
-      el.textContent = `· Última actualización de datos: ${fmtFechaLarga(RAW.generated_at)}`;
+    if (!el || !RAW) return;
+    // last_checked = última vez que se verificó scj.cl en busca de boletines nuevos (la ponga
+    // update_from_boletin.py en cada corrida). generated_at es un respaldo para datos antiguos
+    // que aún no tengan ese campo.
+    const fechaVerificacion = RAW.last_checked || RAW.generated_at;
+    if (!fechaVerificacion) return;
+    let texto = `· Última actualización de datos: ${fmtFechaLarga(fechaVerificacion)}`;
+    const periodo = ultimoPeriodoConDatos();
+    if (periodo) {
+      texto += ` (información disponible hasta ${MONTHS_ES_FULL[periodo.Mes - 1]} de ${periodo.Año})`;
     }
+    el.textContent = texto;
   }
 
   async function init() {

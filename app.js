@@ -2459,9 +2459,27 @@ ${sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.open
     });
   }
 
+  const MONTHS_ES_FULL = [
+    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
+  ];
+  function fmtFechaLarga(iso) {
+    if (!iso) return '';
+    const [y, m, d] = iso.split('-').map(Number);
+    if (!y || !m || !d) return iso;
+    return `${d} de ${MONTHS_ES_FULL[m - 1]} de ${y}`;
+  }
+  function renderFooterActualizacion() {
+    const el = document.getElementById('footer-actualizacion');
+    if (el && RAW && RAW.generated_at) {
+      el.textContent = `· Última actualización de datos: ${fmtFechaLarga(RAW.generated_at)}`;
+    }
+  }
+
   async function init() {
     try {
       await loadData();
+      renderFooterActualizacion();
       aplicarCacheIndicadores();
       setupYearSelectors();
       setupTrendFromSelector();

@@ -200,6 +200,24 @@ select, .chip-select {
 .small { font-size: 12px; }
 .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
 
+/* ---------- Resumen Mensual (comparación año contra año) ---------- */
+.yoy-legend { display: flex; gap: 18px; align-items: center; font-size: 12.5px; color: var(--text-muted); margin: 0 0 12px; }
+.yoy-row { display: flex; gap: 18px; align-items: stretch; }
+.yoy-row-body { flex: 1 1 auto; min-width: 0; }
+.yoy-total-panel {
+  flex: 0 0 210px; background: #fafbfd; border: 1px solid var(--border); border-radius: 8px;
+  padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; justify-content: center;
+}
+.yoy-total-panel-title {
+  font-size: 11.5px; font-weight: 700; color: var(--navy); text-transform: uppercase;
+  letter-spacing: 0.4px; margin-bottom: 2px;
+}
+.yoy-total-row { font-size: 13px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+@media (max-width: 980px) {
+  .yoy-row { flex-direction: column; }
+  .yoy-total-panel { flex: 1 1 auto; }
+}
+
 /* ---------- Impresión / exportación a PDF ---------- */
 @media print {
   .topbar-controls, .tabs, #btn-export-pdf, .filter-row { display: none !important; }
@@ -211,4 +229,5 @@ select, .chip-select {
   .table-scroll { max-height: none; overflow: visible; }
   table.data-table th { position: static; }
   .chart-wrap, .chart-wrap.tall, .chart-wrap.short { height: 260px; }
+  .yoy-row { flex-direction: column; }
 }

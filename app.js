@@ -29,6 +29,8 @@
     'Marina del Sol': 'Marina del Sol', 'Luckia': 'Otros', 'Corporación Meier': 'Otros',
     'Boldt - Invergaming': 'Otros', 'Fundación Cardoen': 'Otros', 'Simunovic - Enjoy': 'Otros',
   };
+  // Paleta para el Resumen Mensual (año contra año): de más antiguo (claro) a más reciente (oscuro).
+  const YEAR_COLORS = ['#9fb3d9', '#3d6bd6', '#16233f'];
   const CASINO_PALETTE = [
     '#2471c9', '#e74c3c', '#16a085', '#f39c12', '#8e44ad', '#27ae60', '#c0392b', '#34495e',
     '#d4a017', '#7f8c8d', '#2980b9', '#e67e22', '#1abc9c', '#9b59b6', '#95a5a6',
@@ -114,6 +116,9 @@
     yearTo: null,
     view: 'resumen',
     casinosSeleccionados: [],
+    mensualScope: 'industria',
+    mensualEntidad: null,
+    mensualYears: null,
     industriaGranularidad: 'anual',
     excluirPandemia: false,
     trendFrom: null,
@@ -297,6 +302,13 @@
     if (state.valueMode === 'uf') return n + ' MM UF';
     if (state.valueMode === 'usd') return 'US$' + n + ' MM';
     return '$' + n + ' MM';
+  }
+  // fmtMoneyMM asume magnitudes de industria (miles de millones); para un casino individual
+  // o un holding pequeño el mismo monto puede quedar por debajo del millón y mostrarse como
+  // "0 MM". fmtMoneyAuto elige automáticamente entre fmtMoney y fmtMoneyMM según la magnitud.
+  function fmtMoneyAuto(v) {
+    if (v === null || v === undefined) return '—';
+    return Math.abs(v) >= 1e6 ? fmtMoneyMM(v) : fmtMoney(v);
   }
   function valueModeLabel() {
     switch (state.valueMode) {
@@ -544,6 +556,121 @@
         elements: { point: { hoverRadius: 0 } },
       },
     });
+  }
+
+  // Gráfico de barras mensuales agrupadas por año, con flechas curvas de variación % entre
+  // años consecutivos sobre cada mes (estilo informe MDS "INDUSTRIA CASINOS DE JUEGOS"),
+  // más una línea punteada de promedio del período. El plugin es de instancia (no se registra
+  // globalmente) para no afectar al resto de los gráficos del dashboard.
+  function makeYoyBarChart(ctx, key, labels, datasets, fmtFn, axisFmt) {
+    destroyChart(key);
+    // Cada par de años consecutivos agrega un "nivel" de arco apilado hacia arriba (ver
+    // yoyAnnotationsPlugin/drawYoyArc); el padding superior del canvas debe crecer con la
+    // cantidad de niveles para que la burbuja de porcentaje más alta no quede cortada ni se
+    // sobreponga al título de la tarjeta.
+    const niveles = Math.max(0, datasets.length - 2);
+    const topPadding = 40 + niveles * 34;
+    charts[key] = new Chart(ctx, {
+      type: 'bar',
+      data: { labels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { top: topPadding } },
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: (item) => `${item.dataset.label}: ${fmtFn(item.raw)}` } },
+        },
+        scales: { y: { ticks: { callback: (v) => axisFmt(v) } } },
+      },
+      plugins: [yoyAnnotationsPlugin(datasets)],
+    });
+  }
+
+  function yoyAnnotationsPlugin(datasets) {
+    return {
+      id: 'yoyAnnotations',
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        const allVals = [];
+        datasets.forEach((ds) => ds.data.forEach((v) => { if (v !== null && v !== undefined) allVals.push(v); }));
+        if (allVals.length) {
+          const avg = allVals.reduce((a, b) => a + b, 0) / allVals.length;
+          const yPix = chart.scales.y.getPixelForValue(avg);
+          ctx.save();
+          ctx.setLineDash([5, 4]);
+          ctx.strokeStyle = '#b4750a';
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.moveTo(chart.chartArea.left, yPix);
+          ctx.lineTo(chart.chartArea.right, yPix);
+          ctx.stroke();
+          ctx.restore();
+        }
+        for (let d = 1; d < datasets.length; d++) {
+          const metaPrev = chart.getDatasetMeta(d - 1);
+          const metaCurr = chart.getDatasetMeta(d);
+          const dataPrev = datasets[d - 1].data;
+          const dataCurr = datasets[d].data;
+          for (let m = 0; m < dataCurr.length; m++) {
+            const vPrev = dataPrev[m], vCurr = dataCurr[m];
+            if (!vPrev || vCurr === null || vCurr === undefined) continue;
+            const pPrev = metaPrev.data[m], pCurr = metaCurr.data[m];
+            if (!pPrev || !pCurr) continue;
+            drawYoyArc(ctx, pPrev.x, pPrev.y, pCurr.x, pCurr.y, (vCurr - vPrev) / vPrev, d - 1);
+          }
+        }
+      },
+    };
+  }
+
+  // Dibuja el arco (curva de Bezier cuadrática) entre la barra del año anterior y la del año
+  // siguiente para un mismo mes, con punta de flecha y burbuja de variación %. `nivel` separa
+  // verticalmente los arcos cuando hay más de un par de años (3 años → 2 pares de flechas).
+  function drawYoyArc(ctx, x1, y1, x2, y2, pct, nivel) {
+    const midX = (x1 + x2) / 2;
+    const topY = Math.min(y1, y2) - 24 - nivel * 30;
+    ctx.save();
+    const color = pct >= 0 ? '#1c8a4b' : '#c23b3b';
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1 - 6);
+    ctx.quadraticCurveTo(midX, topY, x2, y2 - 6);
+    ctx.stroke();
+    drawArrowHead(ctx, x2, y2 - 6, midX, topY, color);
+    drawPctBubble(ctx, midX, topY - 3, (pct >= 0 ? '+' : '') + (pct * 100).toFixed(1) + '%', color);
+    ctx.restore();
+  }
+
+  function drawArrowHead(ctx, tipX, tipY, fromX, fromY, color) {
+    const angle = Math.atan2(tipY - fromY, tipX - fromX);
+    const size = 5;
+    ctx.beginPath();
+    ctx.moveTo(tipX, tipY);
+    ctx.lineTo(tipX - size * Math.cos(angle - Math.PI / 6), tipY - size * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(tipX - size * Math.cos(angle + Math.PI / 6), tipY - size * Math.sin(angle + Math.PI / 6));
+    ctx.closePath();
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  function drawPctBubble(ctx, x, y, text, color) {
+    ctx.font = '700 10px "Segoe UI", Arial, sans-serif';
+    const paddingX = 6, h = 15, rx = h / 2;
+    const w = ctx.measureText(text).width + paddingX * 2;
+    ctx.beginPath();
+    ctx.moveTo(x - w / 2 + rx, y - h / 2);
+    ctx.arcTo(x + w / 2, y - h / 2, x + w / 2, y + h / 2, rx);
+    ctx.arcTo(x + w / 2, y + h / 2, x - w / 2, y + h / 2, rx);
+    ctx.arcTo(x - w / 2, y + h / 2, x - w / 2, y - h / 2, rx);
+    ctx.arcTo(x - w / 2, y - h / 2, x + w / 2, y - h / 2, rx);
+    ctx.closePath();
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, x, y + 0.5);
   }
 
   function shortNum(v) {
@@ -969,6 +1096,8 @@
         <div class="checkbox-list" id="casino-checklist"></div>
         <div class="section-title" style="margin-top:16px; font-size:14px;">Evolución de Ingresos Brutos del Juego por casino</div>
         <div class="chart-wrap tall"><canvas id="chart-casinos-comp"></canvas></div>
+        <div class="section-title" style="margin-top:16px; font-size:14px;">Evolución de Visitas por casino</div>
+        <div class="chart-wrap tall"><canvas id="chart-casinos-comp-visitas"></canvas></div>
       </div>
 
       <div class="section-title">Visitas y gasto promedio por casino${state.periodMode === 'anual' ? ` — ${periodoLabel}` : ''}</div>
@@ -984,6 +1113,7 @@
 
     renderCasinoChecklist();
     renderCasinosComparador();
+    renderCasinosComparadorVisitas();
     renderTablaVisitasCasino(document.getElementById('tabla-visitas-casino'), yTo, prevYear, hastaMes);
     renderTablaOE(document.getElementById('tabla-oe'));
     wirePeriodModeSelect('sel-period-mode-casinos');
@@ -995,6 +1125,7 @@
       ev.target.value = '';
       renderCasinoChecklist();
       renderCasinosComparador();
+      renderCasinosComparadorVisitas();
     });
   }
 
@@ -1012,6 +1143,7 @@
         else state.casinosSeleccionados.push(casino);
         renderCasinoChecklist();
         renderCasinosComparador();
+        renderCasinosComparadorVisitas();
       });
     });
   }
@@ -1026,6 +1158,22 @@
       tension: 0.2, fill: false,
     }));
     makeLineChart(document.getElementById('chart-casinos-comp'), 'casinosComp', labels, datasets, null, true);
+  }
+
+  // Igual que renderCasinosComparador, pero para Visitas. Usa sumFlowNominal (no aggFlowReal):
+  // 'Visitas' es un conteo de personas y nunca se deflacta ni se convierte a UF/USD, siguiendo
+  // el mismo criterio que el resto del dashboard (ver monthValue/mensualSeries).
+  function renderCasinosComparadorVisitas() {
+    const yFrom = state.yearFrom, yTo = state.yearTo;
+    const labels = yearsInRange(yFrom, yTo).map(String);
+    const datasets = state.casinosSeleccionados.map((casino, i) => ({
+      label: casino, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
+      backgroundColor: CASINO_PALETTE[i % CASINO_PALETTE.length] + '20',
+      data: labels.map((y) => sumFlowNominal([casino], Number(y), 'Visitas').valor),
+      tension: 0.2, fill: false,
+    }));
+    makeLineChart(document.getElementById('chart-casinos-comp-visitas'), 'casinosCompVisitas', labels, datasets,
+      { scales: { y: { ticks: { callback: (v) => shortNumPlain(v) } } } }, true);
   }
 
   function renderTablaVisitasCasino(container, year, prevYear, hastaMes) {
@@ -1187,6 +1335,195 @@
     html += `<tr class="total-row"><td>Total</td><td class="num">${fmtNum(total)}</td><td class="num">US$${fmtNum(totalUsd)}</td>${showPesos ? `<td class="num">${fmtMoney(totalConv)}</td>` : ''}</tr>`;
     html += '</tbody></table>';
     container.innerHTML = html;
+  }
+
+  // ---------------------------------------------------------------------
+  // Vista: Resumen Mensual (comparación año contra año, estilo informe MDS)
+  // ---------------------------------------------------------------------
+
+  // Agrega un indicador mes a mes para el alcance/entidad indicados, en cada uno de los
+  // años solicitados. Aplica deflate() para 'Win Total' (respeta el toggle nominal/real/UF/USD);
+  // 'Visitas' se reporta siempre en unidades. Devuelve la serie mensual y el último mes con
+  // dato de cada año (para detectar años parciales / "Acum." y comparar períodos equivalentes).
+  function mensualSeries(scope, key, indicador, years) {
+    const casinoList = casinosFor(scope, key);
+    const monthlyByYear = {}, hastaMesByYear = {};
+    years.forEach((y) => {
+      const vals = [];
+      let hastaMes = 0;
+      for (let m = 1; m <= 12; m++) {
+        let suma = null;
+        casinoList.forEach((c) => {
+          const v = monthValue(c, y, m, indicador);
+          if (v !== null) { suma = (suma || 0) + v; }
+        });
+        if (suma !== null) {
+          vals.push(indicador === 'Win Total' ? deflate(suma, y) : suma);
+          hastaMes = m;
+        } else {
+          vals.push(null);
+        }
+      }
+      monthlyByYear[y] = vals;
+      hastaMesByYear[y] = hastaMes;
+    });
+    return { years, monthlyByYear, hastaMesByYear };
+  }
+
+  // Máximo de años comparables a la vez: el estilo de flechas curvas apiladas (ver
+  // yoyAnnotationsPlugin) se vuelve ilegible con más de 3 años en el mismo gráfico.
+  const MENSUAL_MAX_YEARS = 3;
+
+  function renderResumenMensual() {
+    const el = document.getElementById('view-mensual');
+    if (!state.mensualScope) state.mensualScope = 'industria';
+    // state.mensualYears guarda los años puntuales elegidos (no necesariamente los últimos ni
+    // consecutivos). Se valida contra los años con datos disponibles y, si queda vacío o
+    // inválido, se inicializa con los últimos 3 (comportamiento por defecto).
+    if (!Array.isArray(state.mensualYears) || !state.mensualYears.length ||
+        state.mensualYears.some((y) => !YEARS.includes(y))) {
+      state.mensualYears = YEARS.slice(-MENSUAL_MAX_YEARS);
+    }
+
+    el.innerHTML = `
+      <div class="section-title">Resumen Mensual — comparación año contra año</div>
+      <div class="section-sub">Visitas e Ingresos Brutos del Juego por mes · valores ${valueModeLabel()}</div>
+      <div class="card">
+        <div class="filter-row">
+          <label for="sel-mensual-scope">Alcance</label>
+          <select id="sel-mensual-scope">
+            <option value="industria">Industria (todos los casinos)</option>
+            <option value="holding">Grupo controlador</option>
+            <option value="casino">Casino</option>
+          </select>
+          <div id="mensual-entidad-wrap" class="filter-row" style="margin:0;"></div>
+        </div>
+        <div class="filter-row">
+          <label>Años a comparar (elige entre 1 y ${MENSUAL_MAX_YEARS})</label>
+          <div class="checkbox-list" id="mensual-years-checklist"></div>
+        </div>
+      </div>
+      <div class="section-title">Visitas</div>
+      <div class="card">
+        <div class="yoy-legend" id="mensual-legend-visitas"></div>
+        <div class="yoy-row">
+          <div class="yoy-row-body"><div class="chart-wrap tall"><canvas id="chart-mensual-visitas"></canvas></div></div>
+          <div class="yoy-total-panel" id="mensual-total-visitas"></div>
+        </div>
+      </div>
+      <div class="section-title">Ingresos Brutos del Juego</div>
+      <div class="card">
+        <div class="yoy-legend" id="mensual-legend-ingresos"></div>
+        <div class="yoy-row">
+          <div class="yoy-row-body"><div class="chart-wrap tall"><canvas id="chart-mensual-ingresos"></canvas></div></div>
+          <div class="yoy-total-panel" id="mensual-total-ingresos"></div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('sel-mensual-scope').value = state.mensualScope;
+    renderMensualEntidadSelector();
+    renderMensualYearsChecklist();
+    drawResumenMensual();
+
+    document.getElementById('sel-mensual-scope').addEventListener('change', (ev) => {
+      state.mensualScope = ev.target.value;
+      state.mensualEntidad = null;
+      renderMensualEntidadSelector();
+      drawResumenMensual();
+    });
+  }
+
+  function renderMensualYearsChecklist() {
+    const cont = document.getElementById('mensual-years-checklist');
+    cont.innerHTML = YEARS.map((y) => {
+      const checked = state.mensualYears.includes(y);
+      return `<div class="checkbox-chip ${checked ? 'checked' : ''}" data-year="${y}">${y}</div>`;
+    }).join('');
+    cont.querySelectorAll('.checkbox-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const year = Number(chip.getAttribute('data-year'));
+        const idx = state.mensualYears.indexOf(year);
+        if (idx >= 0) {
+          // No permitir dejar la comparación sin ningún año seleccionado.
+          if (state.mensualYears.length === 1) return;
+          state.mensualYears.splice(idx, 1);
+        } else {
+          // Máximo 3 años simultáneos (ver MENSUAL_MAX_YEARS).
+          if (state.mensualYears.length >= MENSUAL_MAX_YEARS) return;
+          state.mensualYears.push(year);
+          state.mensualYears.sort((a, b) => a - b);
+        }
+        renderMensualYearsChecklist();
+        drawResumenMensual();
+      });
+    });
+  }
+
+  function renderMensualEntidadSelector() {
+    const wrap = document.getElementById('mensual-entidad-wrap');
+    if (state.mensualScope === 'industria') { wrap.innerHTML = ''; return; }
+    const options = state.mensualScope === 'holding' ? HOLDING_ORDER : CASINOS.map((c) => c.Casino);
+    if (!state.mensualEntidad || !options.includes(state.mensualEntidad)) state.mensualEntidad = options[0];
+    wrap.innerHTML = `<label for="sel-mensual-entidad">${state.mensualScope === 'holding' ? 'Grupo controlador' : 'Casino'}</label>
+      <select id="sel-mensual-entidad">${options.map((o) => `<option value="${o}" ${o === state.mensualEntidad ? 'selected' : ''}>${o}</option>`).join('')}</select>`;
+    document.getElementById('sel-mensual-entidad').addEventListener('change', (ev) => {
+      state.mensualEntidad = ev.target.value;
+      drawResumenMensual();
+    });
+  }
+
+  function drawResumenMensual() {
+    // state.mensualYears ya viene ordenado ascendente (ver renderMensualYearsChecklist), lo que
+    // determina el orden izquierda→derecha de las barras y la paleta YEAR_COLORS (claro→oscuro).
+    const years = state.mensualYears;
+    const scope = state.mensualScope;
+    const key = scope === 'industria' ? null : state.mensualEntidad;
+
+    const visSeries = mensualSeries(scope, key, 'Visitas', years);
+    const ingSeries = mensualSeries(scope, key, 'Win Total', years);
+    // Eje del gráfico: 'Visitas' es un conteo (shortNumPlain, sin prefijo de moneda);
+    // 'Ingresos Brutos' respeta el modo de valor vigente (shortNum, con $/UF/US$).
+    // Cada fila tiene su propia leyenda de años (mensual-legend-*), pegada al título de su
+    // propio gráfico, para que no se confunda con la leyenda de la otra fila ni se sobreponga
+    // con el panel de totales.
+    drawYoyRow('chart-mensual-visitas', 'mensualVisitas', years, visSeries, fmtNum, shortNumPlain, 'mensual-total-visitas', 'mensual-legend-visitas');
+    drawYoyRow('chart-mensual-ingresos', 'mensualIngresos', years, ingSeries, fmtMoneyAuto, shortNum, 'mensual-total-ingresos', 'mensual-legend-ingresos');
+  }
+
+  function drawYoyRow(canvasId, chartKey, years, series, fmtFn, axisFmt, totalPanelId, legendId) {
+    const datasets = years.map((y, i) => ({
+      label: String(y),
+      data: series.monthlyByYear[y],
+      backgroundColor: YEAR_COLORS[i % YEAR_COLORS.length],
+      borderRadius: 3,
+      maxBarThickness: 26,
+    }));
+    document.getElementById(legendId).innerHTML = years.map((y, i) =>
+      `<span><span class="legend-dot" style="background:${YEAR_COLORS[i % YEAR_COLORS.length]}"></span>${y}</span>`
+    ).join('');
+    makeYoyBarChart(document.getElementById(canvasId), chartKey, MONTHS_ES, datasets, fmtFn, axisFmt);
+
+    // El total comparado debe cortar TODOS los años en el mismo mes que el año más reciente
+    // (p. ej. "Acum. Abr"), igual que el resto del dashboard (ver periodoLabel en renderCasinos);
+    // de lo contrario se compararía un año parcial contra un año completo.
+    const lastYear = years[years.length - 1];
+    const cutoff = series.hastaMesByYear[lastYear] || 12;
+    const parcial = cutoff > 0 && cutoff < 12;
+    const totalHasta = (y) => {
+      const vals = series.monthlyByYear[y].slice(0, cutoff);
+      const any = vals.some((v) => v !== null && v !== undefined);
+      if (!any) return null;
+      return vals.reduce((a, v) => a + (v || 0), 0);
+    };
+    let html = `<div class="yoy-total-panel-title">Total ${parcial ? 'Acum. ' + MONTHS_ES[cutoff - 1] : 'Año'}</div>`;
+    years.forEach((y, i) => {
+      const total = totalHasta(y);
+      const prevTotal = i > 0 ? totalHasta(years[i - 1]) : null;
+      const delta = i > 0 ? yoy(total, prevTotal) : null;
+      html += `<div class="yoy-total-row"><span class="legend-dot" style="background:${YEAR_COLORS[i % YEAR_COLORS.length]}"></span>${y}: <strong>${fmtFn(total)}</strong> ${delta !== null ? fmtPctDelta(delta) : ''}</div>`;
+    });
+    document.getElementById(totalPanelId).innerHTML = html;
   }
 
   // ---------------------------------------------------------------------
@@ -1492,6 +1829,7 @@
       case 'industria': renderIndustria(); break;
       case 'holdings': renderHoldings(); break;
       case 'casinos': renderCasinos(); break;
+      case 'mensual': renderResumenMensual(); break;
       case 'equipamiento': renderEquipamiento(); break;
       case 'datos': renderDatos(); break;
       case 'admin': renderAdmin(); break;

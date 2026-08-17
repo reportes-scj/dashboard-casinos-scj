@@ -851,10 +851,19 @@
     const el = document.getElementById('view-industria');
     const yFrom = state.yearFrom, yTo = state.yearTo;
     const all = CASINOS.map((c) => c.Casino);
+    // Si el año más reciente del rango está en curso (datos parciales, p. ej. solo hasta abril),
+    // se limita la comparación ANUAL a ese mismo período acumulado en TODOS los años de la serie
+    // (no solo año actual vs. anterior como en las tablas), para que la tendencia no muestre una
+    // caída artificial por comparar años completos contra un año parcial. Mismo criterio que ya
+    // usan las tablas del dashboard (ver monthsWithData/hastaMes en renderCasinos, tablaHoldingsPorMetrica).
+    const hastaMesInd = monthsWithData(all, yTo, 'Visitas') || 12;
+    const acumNoteInd = hastaMesInd < 12
+      ? ` · comparación acumulada Ene–${MONTHS_ES[hastaMesInd - 1]} en todos los años (${yTo} en curso)`
+      : '';
 
     el.innerHTML = `
       <div class="section-title">Industria — Serie Histórica</div>
-      <div class="section-sub">${yFrom}–${yTo} · valores ${valueModeLabel()}</div>
+      <div class="section-sub">${yFrom}–${yTo} · valores ${valueModeLabel()}${acumNoteInd}</div>
       <div class="filter-row">
         <label>Granularidad</label>
         <select id="sel-granularidad">
@@ -881,14 +890,15 @@
       const ingresos = [], visitas = [];
       yearsInRange(yFrom, yTo).forEach((y) => {
         labels.push(String(y));
-        ingresos.push(aggFlowReal(all, y, 'Win Total').valor);
-        visitas.push(sumFlowNominal(all, y, 'Visitas').valor);
+        ingresos.push(aggFlowReal(all, y, 'Win Total', hastaMesInd).valor);
+        visitas.push(sumFlowNominal(all, y, 'Visitas', hastaMesInd).valor);
       });
+      const sufijoLabel = hastaMesInd < 12 ? ` (Acum. ${MONTHS_ES[hastaMesInd - 1]})` : '';
       makeLineChart(document.getElementById('chart-ind-ingresos'), 'indIngresos', labels,
-        [{ label: 'Ingresos Brutos', data: ingresos, borderColor: '#2471c9', backgroundColor: 'rgba(36,113,201,.12)', fill: true, tension: 0.25 }],
+        [{ label: 'Ingresos Brutos' + sufijoLabel, data: ingresos, borderColor: '#2471c9', backgroundColor: 'rgba(36,113,201,.12)', fill: true, tension: 0.25 }],
         null, true);
       makeLineChart(document.getElementById('chart-ind-visitas'), 'indVisitas', labels,
-        [{ label: 'Visitas', data: visitas, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,.12)', fill: true, tension: 0.25 }],
+        [{ label: 'Visitas' + sufijoLabel, data: visitas, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,.12)', fill: true, tension: 0.25 }],
         { scales: { y: { ticks: { callback: (v) => shortNumPlain(v) } } } }, true);
     } else {
       const labels2 = [], ing2 = [], vis2 = [], years2 = [];
@@ -915,10 +925,10 @@
         { scales: { y: { ticks: { callback: (v) => shortNumPlain(v) } } } }, true, years2);
     }
 
-    renderTablaIndustriaAnual(document.getElementById('tabla-industria-anual'), yFrom, yTo);
+    renderTablaIndustriaAnual(document.getElementById('tabla-industria-anual'), yFrom, yTo, hastaMesInd);
   }
 
-  function renderTablaIndustriaAnual(container, yFrom, yTo) {
+  function renderTablaIndustriaAnual(container, yFrom, yTo, hastaMes) {
     const all = CASINOS.map((c) => c.Casino);
     let html = `<table class="data-table"><thead><tr>
       <th>Año</th><th class="num">Ingresos Brutos</th><th class="num">Var.%</th>
@@ -926,9 +936,9 @@
     </tr></thead><tbody>`;
     let prevVal = null, prevVis = null;
     for (let y = yFrom; y <= yTo; y++) {
-      const nom = sumFlowNominal(all, y, 'Win Total').valor;
+      const nom = sumFlowNominal(all, y, 'Win Total', hastaMes).valor;
       const val = deflate(nom, y);
-      const vis = sumFlowNominal(all, y, 'Visitas').valor;
+      const vis = sumFlowNominal(all, y, 'Visitas', hastaMes).valor;
       const ticket = ticketPromedio(val, vis);
       html += `<tr>
         <td>${y}</td><td class="num">${fmtMoneyMM(val)}</td>
@@ -973,10 +983,17 @@
   function renderHoldings() {
     const el = document.getElementById('view-holdings');
     const yFrom = state.yearFrom, yTo = state.yearTo;
+    // Mismo criterio de período acumulado equivalente que renderIndustria(): si yTo está en
+    // curso, se corta la evolución de TODOS los años al mismo mes para no comparar años completos
+    // contra un año parcial en la línea de tendencia.
+    const hastaMesHold = monthsWithData(CASINOS.map((c) => c.Casino), yTo, 'Visitas') || 12;
+    const acumNoteHold = hastaMesHold < 12
+      ? ` · comparación acumulada Ene–${MONTHS_ES[hastaMesHold - 1]} en todos los años (${yTo} en curso)`
+      : '';
 
     el.innerHTML = `
       <div class="section-title">Holdings — Comparación entre grupos controladores</div>
-      <div class="section-sub">Clasificación oficial según Tabla N°2, Informe Anual de la Industria 2025 (SCJ) · ${yFrom}–${yTo} · valores ${valueModeLabel()}</div>
+      <div class="section-sub">Clasificación oficial según Tabla N°2, Informe Anual de la Industria 2025 (SCJ) · ${yFrom}–${yTo} · valores ${valueModeLabel()}${acumNoteHold}</div>
       <div class="card">
         <div class="section-title" style="margin-top:0;">Evolución de Ingresos Brutos por Holding</div>
         <div class="chart-wrap tall"><canvas id="chart-hold-evol"></canvas></div>
@@ -1000,7 +1017,7 @@
     const labels = yearsInRange(yFrom, yTo).map(String);
     const datasets = HOLDING_ORDER.map((h) => ({
       label: h, borderColor: HOLDING_COLORS[h], backgroundColor: HOLDING_COLORS[h] + '20',
-      data: labels.map((y) => aggFlowReal(casinosFor('holding', h), Number(y), 'Win Total').valor),
+      data: labels.map((y) => aggFlowReal(casinosFor('holding', h), Number(y), 'Win Total', hastaMesHold).valor),
       tension: 0.2, fill: false,
     }));
     makeLineChart(document.getElementById('chart-hold-evol'), 'holdEvol', labels, datasets, null, true);
@@ -1164,11 +1181,15 @@
 
   function renderCasinosComparador() {
     const yFrom = state.yearFrom, yTo = state.yearTo;
+    // Mismo criterio de período acumulado equivalente que renderIndustria(): si yTo está en
+    // curso, se corta la evolución de TODOS los años al mismo mes.
+    const hastaMes = monthsWithData(CASINOS.map((c) => c.Casino), yTo, 'Visitas') || 12;
+    const sufijoLabel = hastaMes < 12 ? ` (Acum. ${MONTHS_ES[hastaMes - 1]})` : '';
     const labels = yearsInRange(yFrom, yTo).map(String);
     const datasets = state.casinosSeleccionados.map((casino, i) => ({
-      label: casino, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
+      label: casino + sufijoLabel, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
       backgroundColor: CASINO_PALETTE[i % CASINO_PALETTE.length] + '20',
-      data: labels.map((y) => aggFlowReal([casino], Number(y), 'Win Total').valor),
+      data: labels.map((y) => aggFlowReal([casino], Number(y), 'Win Total', hastaMes).valor),
       tension: 0.2, fill: false,
     }));
     makeLineChart(document.getElementById('chart-casinos-comp'), 'casinosComp', labels, datasets, null, true);
@@ -1179,11 +1200,13 @@
   // el mismo criterio que el resto del dashboard (ver monthValue/mensualSeries).
   function renderCasinosComparadorVisitas() {
     const yFrom = state.yearFrom, yTo = state.yearTo;
+    const hastaMes = monthsWithData(CASINOS.map((c) => c.Casino), yTo, 'Visitas') || 12;
+    const sufijoLabel = hastaMes < 12 ? ` (Acum. ${MONTHS_ES[hastaMes - 1]})` : '';
     const labels = yearsInRange(yFrom, yTo).map(String);
     const datasets = state.casinosSeleccionados.map((casino, i) => ({
-      label: casino, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
+      label: casino + sufijoLabel, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
       backgroundColor: CASINO_PALETTE[i % CASINO_PALETTE.length] + '20',
-      data: labels.map((y) => sumFlowNominal([casino], Number(y), 'Visitas').valor),
+      data: labels.map((y) => sumFlowNominal([casino], Number(y), 'Visitas', hastaMes).valor),
       tension: 0.2, fill: false,
     }));
     makeLineChart(document.getElementById('chart-casinos-comp-visitas'), 'casinosCompVisitas', labels, datasets,

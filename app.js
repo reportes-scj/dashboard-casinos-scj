@@ -1092,6 +1092,8 @@
             ${HOLDING_ORDER.map((h) => `<option value="${h}">${h}</option>`).join('')}
           </select>
           <span class="small muted">Carga todos los casinos del grupo; luego puedes agregar o quitar casinos individuales abajo.</span>
+          <button class="btn btn-secondary" id="btn-casinos-todos" type="button" style="padding:5px 12px; font-size:12px;">Seleccionar todos</button>
+          <button class="btn btn-secondary" id="btn-casinos-ninguno" type="button" style="padding:5px 12px; font-size:12px;">Quitar todos</button>
         </div>
         <div class="checkbox-list" id="casino-checklist"></div>
         <div class="section-title" style="margin-top:16px; font-size:14px;">Evolución de Ingresos Brutos del Juego por casino</div>
@@ -1123,6 +1125,18 @@
       if (!holding) return;
       state.casinosSeleccionados = casinosFor('holding', holding);
       ev.target.value = '';
+      renderCasinoChecklist();
+      renderCasinosComparador();
+      renderCasinosComparadorVisitas();
+    });
+    document.getElementById('btn-casinos-todos').addEventListener('click', () => {
+      state.casinosSeleccionados = CASINOS.map((c) => c.Casino);
+      renderCasinoChecklist();
+      renderCasinosComparador();
+      renderCasinosComparadorVisitas();
+    });
+    document.getElementById('btn-casinos-ninguno').addEventListener('click', () => {
+      state.casinosSeleccionados = [];
       renderCasinoChecklist();
       renderCasinosComparador();
       renderCasinosComparadorVisitas();

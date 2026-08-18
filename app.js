@@ -465,6 +465,62 @@
     });
   }
 
+  // Plugin de instancia (no registrado globalmente) que dibuja el valor de cada punto sobre la
+  // línea, alternando arriba/abajo por dataset (dataset 0 arriba, dataset 1 abajo) para reducir
+  // superposición cuando ambas series se cruzan. Con halo blanco detrás del texto para legibilidad
+  // sobre la grilla, mismo criterio visual que drawPctBubble en yoyAnnotationsPlugin.
+  function pointLabelsPlugin(fmtFn) {
+    return {
+      id: 'pointLabels',
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.font = '600 9px "Segoe UI", Arial, sans-serif';
+        ctx.textAlign = 'center';
+        chart.data.datasets.forEach((ds, dsIndex) => {
+          const meta = chart.getDatasetMeta(dsIndex);
+          if (meta.hidden) return;
+          const arriba = dsIndex % 2 === 0;
+          ctx.textBaseline = arriba ? 'alphabetic' : 'hanging';
+          const yOff = arriba ? -7 : 9;
+          ds.data.forEach((v, i) => {
+            if (v === null || v === undefined) return;
+            const point = meta.data[i];
+            if (!point) return;
+            const text = fmtFn(v);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = 'rgba(255,255,255,0.92)';
+            ctx.strokeText(text, point.x, point.y + yOff);
+            ctx.fillStyle = ds.borderColor || '#333';
+            ctx.fillText(text, point.x, point.y + yOff);
+          });
+        });
+        ctx.restore();
+      },
+    };
+  }
+
+  // Igual que makeLineChart, pero con etiquetas de dato en cada punto (pointLabelsPlugin).
+  // Se usa en el comparador de Resumen Mensual, donde solo hay 2 series y el detalle punto a
+  // punto importa más que en los gráficos de tendencia general del resto del dashboard.
+  function makeComparadorLineChart(ctx, key, labels, datasets, opts, fmtFn) {
+    destroyChart(key);
+    charts[key] = new Chart(ctx, {
+      type: 'line',
+      data: { labels, datasets },
+      options: Object.assign({
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        layout: { padding: { top: 16, bottom: 6, left: 8, right: 8 } },
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+        },
+        scales: { y: { ticks: { callback: (v) => shortNum(v) } } },
+      }, opts || {}),
+      plugins: [pointLabelsPlugin(fmtFn)],
+    });
+  }
+
   function makeBarChart(ctx, key, labels, datasets, opts) {
     destroyChart(key);
     charts[key] = new Chart(ctx, {
@@ -1456,12 +1512,47 @@
           <div class="yoy-total-panel" id="mensual-total-ingresos"></div>
         </div>
       </div>
+      <div class="section-title">Comparar grupo controlador o casino</div>
+      <div class="section-sub">Compara un grupo controlador o un casino contra otro grupo, otro casino o el promedio de la industria, en el año o mes que elijas.</div>
+      <div class="card">
+        <div class="filter-row">
+          <label for="comp-a-tipo">Entidad A</label>
+          <select id="comp-a-tipo">
+            <option value="holding">Grupo controlador</option>
+            <option value="casino">Casino</option>
+          </select>
+          <select id="comp-a-entidad"></select>
+        </div>
+        <div class="filter-row">
+          <label for="comp-b-tipo">Comparar contra</label>
+          <select id="comp-b-tipo">
+            <option value="holding">Otro grupo controlador</option>
+            <option value="casino">Otro casino</option>
+            <option value="industria_prom">Promedio de la industria (por casino)</option>
+          </select>
+          <select id="comp-b-entidad"></select>
+        </div>
+        <div class="filter-row">
+          <label for="comp-periodo-tipo">Período</label>
+          <select id="comp-periodo-tipo">
+            <option value="anio">Año completo</option>
+            <option value="mes">Mes específico</option>
+          </select>
+          <select id="comp-periodo-anio"></select>
+          <select id="comp-periodo-mes"></select>
+        </div>
+        <div id="comp-resultado"></div>
+        <div id="comp-chart-titulo" class="section-sub" style="margin-top:14px;"></div>
+        <div class="chart-wrap"><canvas id="comp-chart-visitas"></canvas></div>
+        <div class="chart-wrap" style="margin-top:10px;"><canvas id="comp-chart-ingresos"></canvas></div>
+      </div>
     `;
 
     document.getElementById('sel-mensual-scope').value = state.mensualScope;
     renderMensualEntidadSelector();
     renderMensualYearsChecklist();
     drawResumenMensual();
+    renderMensualComparador();
 
     document.getElementById('sel-mensual-scope').addEventListener('change', (ev) => {
       state.mensualScope = ev.target.value;
@@ -1561,6 +1652,276 @@
       html += `<div class="yoy-total-row"><span class="legend-dot" style="background:${YEAR_COLORS[i % YEAR_COLORS.length]}"></span>${y}: <strong>${fmtFn(total)}</strong> ${delta !== null ? fmtPctDelta(delta) : ''}</div>`;
     });
     document.getElementById(totalPanelId).innerHTML = html;
+  }
+
+  // ---------------------------------------------------------------------
+  // Resumen Mensual: comparador libre (grupo/casino vs. grupo/casino/promedio industria)
+  // ---------------------------------------------------------------------
+
+  // Opciones de entidad disponibles para el selector, según el tipo elegido ('holding'/'casino').
+  // 'industria_prom' no tiene lista de entidades: siempre representa el promedio de todos los casinos.
+  function compEntidadOptions(tipo) {
+    if (tipo === 'holding') return HOLDING_ORDER;
+    if (tipo === 'casino') return CASINOS.map((c) => c.Casino);
+    return [];
+  }
+
+  // Para 'holding' se aclara "(promedio por casino)" porque el valor mostrado NO es la suma
+  // del grupo (que siempre ganaría por volumen frente a un solo casino), sino el promedio por
+  // casino dentro del grupo — mismo criterio que 'industria_prom', para que la comparación sea
+  // justa sin importar cuántas propiedades tenga cada lado.
+  function compEntidadLabel(entity) {
+    if (entity.tipo === 'casino') return entity.key;
+    if (entity.tipo === 'holding') return `${entity.key} (promedio por casino)`;
+    return 'Promedio de la industria (por casino)';
+  }
+
+  function entidadCasinoList(entity) {
+    if (entity.tipo === 'holding') return casinosFor('holding', entity.key);
+    if (entity.tipo === 'casino') return casinosFor('casino', entity.key);
+    if (entity.tipo === 'industria_prom') return casinosFor('industria', null);
+    return [];
+  }
+
+  // Valor de un indicador para una entidad (grupo/casino/promedio industria) en un período
+  // (año completo o mes específico). El total siempre se divide por la cantidad de casinos que
+  // efectivamente reportaron datos en ese período (no por el tamaño nominal del grupo), de modo
+  // que 'holding' e 'industria_prom' queden expresados como promedio por casino: así un grupo de
+  // varias propiedades no le "gana" a un solo casino solo por volumen. Para 'casino' la lista
+  // tiene un único elemento, así que dividir por nConDatos no cambia el valor.
+  function valorEntidadPeriodo(entity, periodo, indicador) {
+    const casinoList = entidadCasinoList(entity);
+    if (!casinoList.length) return null;
+    let valorNominal = null;
+    let nConDatos = 0;
+    if (periodo.tipo === 'mes') {
+      casinoList.forEach((c) => {
+        const v = monthValue(c, periodo.anio, periodo.mes, indicador);
+        if (v !== null) { valorNominal = (valorNominal || 0) + v; nConDatos++; }
+      });
+    } else {
+      casinoList.forEach((c) => {
+        let sumaCasino = null;
+        for (let m = 1; m <= 12; m++) {
+          const v = monthValue(c, periodo.anio, m, indicador);
+          if (v !== null) sumaCasino = (sumaCasino || 0) + v;
+        }
+        if (sumaCasino !== null) { valorNominal = (valorNominal || 0) + sumaCasino; nConDatos++; }
+      });
+    }
+    if (valorNominal === null) return null;
+    let valor = indicador === 'Win Total' ? deflate(valorNominal, periodo.anio) : valorNominal;
+    if (nConDatos > 0) valor = valor / nConDatos;
+    return valor;
+  }
+
+  function periodoLabelComp(periodo) {
+    if (periodo.tipo === 'mes') return `${MONTHS_ES_FULL[periodo.mes - 1]} de ${periodo.anio}`;
+    return `año ${periodo.anio}`;
+  }
+
+  // Cantidad de meses con datos de Visitas informados para toda la industria en un año dado
+  // (se usa como "corte" común al comparar años completos, para que un año en curso con solo
+  // algunos meses informados se compare de forma pareja contra años ya cerrados).
+  function mesesDisponiblesAnio(anio) {
+    const meses = monthsWithData(CASINOS.map((c) => c.Casino), anio, 'Visitas');
+    return meses || 12;
+  }
+
+  // Igual que valorEntidadPeriodo (rama 'año'), pero limitando la suma a los primeros
+  // `hastaMes` meses del año, para poder comparar años parejos entre sí en la gráfica histórica.
+  function valorEntidadAnioHasta(entity, anio, hastaMes, indicador) {
+    const casinoList = entidadCasinoList(entity);
+    if (!casinoList.length) return null;
+    let valorNominal = null;
+    let nConDatos = 0;
+    casinoList.forEach((c) => {
+      let sumaCasino = null;
+      for (let m = 1; m <= hastaMes; m++) {
+        const v = monthValue(c, anio, m, indicador);
+        if (v !== null) sumaCasino = (sumaCasino || 0) + v;
+      }
+      if (sumaCasino !== null) { valorNominal = (valorNominal || 0) + sumaCasino; nConDatos++; }
+    });
+    if (valorNominal === null) return null;
+    let valor = indicador === 'Win Total' ? deflate(valorNominal, anio) : valorNominal;
+    if (nConDatos > 0) valor = valor / nConDatos;
+    return valor;
+  }
+
+  // Serie de los últimos 12 meses (terminando en anioFin/mesFin) para una entidad e indicador,
+  // usada en el gráfico histórico del comparador cuando el período elegido es "mes específico".
+  function comparadorSerieMeses(entity, indicador, anioFin, mesFin) {
+    const casinoList = entidadCasinoList(entity);
+    const seq = [];
+    let y = anioFin, m = mesFin;
+    for (let i = 0; i < 12; i++) {
+      seq.unshift({ y, m });
+      m--;
+      if (m < 1) { m = 12; y--; }
+    }
+    const data = seq.map((p) => {
+      if (!casinoList.length) return null;
+      let valorNominal = null;
+      let nConDatos = 0;
+      casinoList.forEach((c) => {
+        const v = monthValue(c, p.y, p.m, indicador);
+        if (v !== null) { valorNominal = (valorNominal || 0) + v; nConDatos++; }
+      });
+      if (valorNominal === null) return null;
+      let valor = indicador === 'Win Total' ? deflate(valorNominal, p.y) : valorNominal;
+      if (nConDatos > 0) valor = valor / nConDatos;
+      return valor;
+    });
+    const labels = seq.map((p) => `${MONTHS_ES[p.m - 1]} ${String(p.y).slice(-2)}`);
+    return { labels, data };
+  }
+
+  // Serie de los últimos 5 años con datos (terminando en anioFin) para una entidad e indicador,
+  // usada en el gráfico histórico del comparador cuando el período elegido es "año completo".
+  // Si el año más reciente no tiene los 12 meses informados, todos los años se acumulan solo
+  // hasta ese mismo mes de corte, para que la comparación sea pareja.
+  function comparadorSerieAnios(entity, indicador, anioFin) {
+    const hastaMes = mesesDisponiblesAnio(anioFin);
+    const anios = YEARS.filter((y) => y <= anioFin).slice(-5);
+    const data = anios.map((y) => valorEntidadAnioHasta(entity, y, hastaMes, indicador));
+    const labels = anios.map((y) => (hastaMes < 12 ? `${y} (a ${MONTHS_ES[hastaMes - 1]})` : `${y}`));
+    return { labels, data };
+  }
+
+  function renderMensualComparador() {
+    if (!state.compA) state.compA = { tipo: 'holding', key: HOLDING_ORDER[0] };
+    if (!state.compB) state.compB = { tipo: 'holding', key: HOLDING_ORDER[1] || HOLDING_ORDER[0] };
+    if (!state.compPeriodo) {
+      const info = latestYearInfo();
+      state.compPeriodo = { tipo: 'mes', anio: info.year, mes: info.meses || 12 };
+    }
+
+    const aTipoSel = document.getElementById('comp-a-tipo');
+    const aEntSel = document.getElementById('comp-a-entidad');
+    const bTipoSel = document.getElementById('comp-b-tipo');
+    const bEntSel = document.getElementById('comp-b-entidad');
+    const perTipoSel = document.getElementById('comp-periodo-tipo');
+    const perAnioSel = document.getElementById('comp-periodo-anio');
+    const perMesSel = document.getElementById('comp-periodo-mes');
+    if (!aTipoSel) return; // la vista no está montada (p.ej. se cambió de pestaña)
+
+    function fillEntidadSelect(sel, tipo, current) {
+      const options = compEntidadOptions(tipo);
+      if (!options.length) { sel.style.display = 'none'; sel.innerHTML = ''; return null; }
+      sel.style.display = '';
+      if (!current || !options.includes(current)) current = options[0];
+      sel.innerHTML = options.map((o) => `<option value="${o}" ${o === current ? 'selected' : ''}>${o}</option>`).join('');
+      return current;
+    }
+
+    aTipoSel.value = state.compA.tipo;
+    state.compA.key = fillEntidadSelect(aEntSel, state.compA.tipo, state.compA.key);
+
+    bTipoSel.value = state.compB.tipo;
+    state.compB.key = fillEntidadSelect(bEntSel, state.compB.tipo, state.compB.key);
+
+    perTipoSel.value = state.compPeriodo.tipo;
+    perAnioSel.innerHTML = YEARS.map((y) => `<option value="${y}" ${y === state.compPeriodo.anio ? 'selected' : ''}>${y}</option>`).join('');
+    perMesSel.innerHTML = MONTHS_ES_FULL.map((m, i) => {
+      const mesNum = i + 1;
+      const label = m.charAt(0).toUpperCase() + m.slice(1);
+      return `<option value="${mesNum}" ${mesNum === state.compPeriodo.mes ? 'selected' : ''}>${label}</option>`;
+    }).join('');
+    perMesSel.style.display = state.compPeriodo.tipo === 'mes' ? '' : 'none';
+
+    aTipoSel.onchange = () => { state.compA = { tipo: aTipoSel.value, key: null }; renderMensualComparador(); };
+    aEntSel.onchange = () => { state.compA.key = aEntSel.value; drawMensualComparador(); };
+    bTipoSel.onchange = () => { state.compB = { tipo: bTipoSel.value, key: null }; renderMensualComparador(); };
+    bEntSel.onchange = () => { state.compB.key = bEntSel.value; drawMensualComparador(); };
+    perTipoSel.onchange = () => { state.compPeriodo.tipo = perTipoSel.value; renderMensualComparador(); };
+    perAnioSel.onchange = () => { state.compPeriodo.anio = Number(perAnioSel.value); drawMensualComparador(); };
+    perMesSel.onchange = () => { state.compPeriodo.mes = Number(perMesSel.value); drawMensualComparador(); };
+
+    drawMensualComparador();
+  }
+
+  function drawMensualComparador() {
+    const cont = document.getElementById('comp-resultado');
+    if (!cont) return;
+    const a = state.compA, b = state.compB, periodo = state.compPeriodo;
+    const labelA = compEntidadLabel(a);
+    const labelB = compEntidadLabel(b);
+    const perLabel = periodoLabelComp(periodo);
+
+    const visA = valorEntidadPeriodo(a, periodo, 'Visitas');
+    const visB = valorEntidadPeriodo(b, periodo, 'Visitas');
+    const ingA = valorEntidadPeriodo(a, periodo, 'Win Total');
+    const ingB = valorEntidadPeriodo(b, periodo, 'Win Total');
+
+    const row = (label, valA, valB, fmtFn) => `<tr>
+        <td>${label}</td>
+        <td class="num">${fmtFn(valA)}</td>
+        <td class="num">${fmtFn(valB)}</td>
+        <td class="num">${fmtPctDelta(yoy(valA, valB))}</td>
+      </tr>`;
+
+    let html = `<p class="small muted" style="margin:0 0 10px;">Comparando <strong>${labelA}</strong> contra <strong>${labelB}</strong> — ${perLabel}.</p>`;
+    html += `<table class="data-table"><thead><tr>
+        <th>Indicador</th><th class="num">${labelA}</th><th class="num">${labelB}</th><th class="num">Var.% (A vs. B)</th>
+      </tr></thead><tbody>`;
+    html += row('Visitas', visA, visB, fmtNum);
+    html += row('Ingresos Brutos del Juego', ingA, ingB, fmtMoneyAuto);
+    html += '</tbody></table>';
+    cont.innerHTML = html;
+
+    drawComparadorCharts(a, b, periodo, labelA, labelB);
+  }
+
+  // Gráficos históricos del comparador: últimos 12 meses (si el período elegido es un mes
+  // específico) o últimos 5 años (si el período elegido es año completo, acumulando todos los
+  // años solo hasta el mismo mes de corte que tenga el año más reciente disponible).
+  function drawComparadorCharts(a, b, periodo, labelA, labelB) {
+    const tituloEl = document.getElementById('comp-chart-titulo');
+    const canvasVis = document.getElementById('comp-chart-visitas');
+    const canvasIng = document.getElementById('comp-chart-ingresos');
+    if (!canvasVis || !canvasIng) return;
+
+    let serieVisA, serieVisB, serieIngA, serieIngB, tituloRango;
+    if (periodo.tipo === 'mes') {
+      serieVisA = comparadorSerieMeses(a, 'Visitas', periodo.anio, periodo.mes);
+      serieVisB = comparadorSerieMeses(b, 'Visitas', periodo.anio, periodo.mes);
+      serieIngA = comparadorSerieMeses(a, 'Win Total', periodo.anio, periodo.mes);
+      serieIngB = comparadorSerieMeses(b, 'Win Total', periodo.anio, periodo.mes);
+      tituloRango = 'Evolución de los últimos 12 meses';
+    } else {
+      serieVisA = comparadorSerieAnios(a, 'Visitas', periodo.anio);
+      serieVisB = comparadorSerieAnios(b, 'Visitas', periodo.anio);
+      serieIngA = comparadorSerieAnios(a, 'Win Total', periodo.anio);
+      serieIngB = comparadorSerieAnios(b, 'Win Total', periodo.anio);
+      tituloRango = 'Evolución de los últimos ' + serieVisA.labels.length + ' años';
+    }
+    if (tituloEl) tituloEl.textContent = `${tituloRango} — ${labelA} vs. ${labelB}`;
+
+    const dsVis = [
+      { label: labelA, data: serieVisA.data, borderColor: '#2471c9', backgroundColor: '#2471c922', tension: 0.25, pointRadius: 2 },
+      { label: labelB, data: serieVisB.data, borderColor: '#e74c3c', backgroundColor: '#e74c3c22', tension: 0.25, pointRadius: 2 },
+    ];
+    const dsIng = [
+      { label: labelA, data: serieIngA.data, borderColor: '#2471c9', backgroundColor: '#2471c922', tension: 0.25, pointRadius: 2 },
+      { label: labelB, data: serieIngB.data, borderColor: '#e74c3c', backgroundColor: '#e74c3c22', tension: 0.25, pointRadius: 2 },
+    ];
+    makeComparadorLineChart(canvasVis, 'comp-chart-visitas', serieVisA.labels, dsVis, {
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+        title: { display: true, text: 'Visitas', font: { size: 12 } },
+        tooltip: { callbacks: { label: (item) => `${item.dataset.label}: ${fmtNum(item.raw)}` } },
+      },
+      scales: { x: { offset: true }, y: { ticks: { callback: (v) => shortNum(v) } } },
+    }, shortNum);
+    makeComparadorLineChart(canvasIng, 'comp-chart-ingresos', serieIngA.labels, dsIng, {
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+        title: { display: true, text: 'Ingresos Brutos del Juego', font: { size: 12 } },
+        tooltip: { callbacks: { label: (item) => `${item.dataset.label}: ${fmtMoneyAuto(item.raw)}` } },
+      },
+      scales: { x: { offset: true }, y: { ticks: { callback: (v) => shortNum(v) } } },
+    }, shortNum);
   }
 
   // ---------------------------------------------------------------------

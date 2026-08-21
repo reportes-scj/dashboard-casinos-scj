@@ -99,6 +99,7 @@ def fetch_boletines(year):
 MONTH_TITLE_RE = re.compile(
     r"BOLET[IÍ]N ESTAD[IÍ]STICO\s+([A-ZÑ]+)(?:\s+DE)?\s+(\d{4})", re.IGNORECASE
 )
+URL_YEARMONTH_RE = re.compile(r"Boletin-Estadistico-(\d{4})-(\d{2})", re.IGNORECASE)
 
 
 def parse_monthly_title(title):
@@ -114,6 +115,19 @@ def parse_monthly_title(title):
         return None  # p.ej. "PRIMER TRIMESTRE" no matchea ningún nombre de mes
     mes = meses_upper.index(mes_txt) + 1
     return int(año_txt), mes
+
+
+def parse_url_yearmonth(url):
+    """Extrae (año, mes) del nombre de archivo del boletín.
+    Fallback para boletines trimestrales/semestrales cuyo título no contiene nombre de mes
+    explícito (p.ej. 'SEGUNDO TRIMESTRE DE 2026' → Boletin-Estadistico-2026-06.xlsx → (2026, 6))."""
+    m = URL_YEARMONTH_RE.search(url)
+    if not m:
+        return None
+    año, mes = int(m.group(1)), int(m.group(2))
+    if not (1 <= mes <= 12):
+        return None
+    return año, mes
 
 
 def latest_month_in_data(records, año):
@@ -234,7 +248,7 @@ def main():
 
     monthly = []
     for b in boletines:
-        parsed = parse_monthly_title(b["title"])
+        parsed = parse_monthly_title(b["title"]) or parse_url_yearmonth(b["url"])
         if parsed:
             monthly.append((parsed[0], parsed[1], b["url"], b["title"]))
 

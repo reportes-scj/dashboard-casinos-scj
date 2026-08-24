@@ -30,7 +30,7 @@
     'Boldt - Invergaming': 'Otros', 'Fundación Cardoen': 'Otros', 'Simunovic - Enjoy': 'Otros',
   };
   // Paleta para el Resumen Mensual (año contra año): de más antiguo (claro) a más reciente (oscuro).
-  const YEAR_COLORS = ['#9fb3d9', '#3d6bd6', '#16233f'];
+  const YEAR_COLORS = ['#a9c3de', '#1e5aa8', '#123a6b'];
   const CASINO_PALETTE = [
     '#2471c9', '#e74c3c', '#16a085', '#f39c12', '#8e44ad', '#27ae60', '#c0392b', '#34495e',
     '#d4a017', '#7f8c8d', '#2980b9', '#e67e22', '#1abc9c', '#9b59b6', '#95a5a6',
@@ -468,7 +468,7 @@
   // Plugin de instancia (no registrado globalmente) que dibuja el valor de cada punto sobre la
   // línea, alternando arriba/abajo por dataset (dataset 0 arriba, dataset 1 abajo) para reducir
   // superposición cuando ambas series se cruzan. Con halo blanco detrás del texto para legibilidad
-  // sobre la grilla, mismo criterio visual que drawPctBubble en yoyAnnotationsPlugin.
+  // sobre la grilla.
   function pointLabelsPlugin(fmtFn) {
     return {
       id: 'pointLabels',
@@ -614,119 +614,49 @@
     });
   }
 
-  // Gráfico de barras mensuales agrupadas por año, con flechas curvas de variación % entre
-  // años consecutivos sobre cada mes (estilo informe MDS "INDUSTRIA CASINOS DE JUEGOS"),
-  // más una línea punteada de promedio del período. El plugin es de instancia (no se registra
-  // globalmente) para no afectar al resto de los gráficos del dashboard.
+  // Gráfico de barras mensuales agrupadas por año, con una línea punteada de promedio del
+  // período. La variación % mes a mes entre años consecutivos se muestra en la tabla de detalle
+  // debajo del gráfico (ver mensualVariationTableHtml), no superpuesta sobre las barras, para
+  // evitar que las burbujas de variación se amontonen cuando se comparan 3 años a la vez.
   function makeYoyBarChart(ctx, key, labels, datasets, fmtFn, axisFmt) {
     destroyChart(key);
-    // Cada par de años consecutivos agrega un "nivel" de arco apilado hacia arriba (ver
-    // yoyAnnotationsPlugin/drawYoyArc); el padding superior del canvas debe crecer con la
-    // cantidad de niveles para que la burbuja de porcentaje más alta no quede cortada ni se
-    // sobreponga al título de la tarjeta.
-    const niveles = Math.max(0, datasets.length - 2);
-    const topPadding = 40 + niveles * 34;
     charts[key] = new Chart(ctx, {
       type: 'bar',
       data: { labels, datasets },
       options: {
         responsive: true, maintainAspectRatio: false,
-        layout: { padding: { top: topPadding } },
+        layout: { padding: { top: 16 } },
         plugins: {
           legend: { display: false },
           tooltip: { callbacks: { label: (item) => `${item.dataset.label}: ${fmtFn(item.raw)}` } },
         },
         scales: { y: { ticks: { callback: (v) => axisFmt(v) } } },
       },
-      plugins: [yoyAnnotationsPlugin(datasets)],
+      plugins: [yoyAverageLinePlugin(datasets)],
     });
   }
 
-  function yoyAnnotationsPlugin(datasets) {
+  function yoyAverageLinePlugin(datasets) {
     return {
-      id: 'yoyAnnotations',
+      id: 'yoyAverageLine',
       afterDatasetsDraw(chart) {
         const ctx = chart.ctx;
         const allVals = [];
         datasets.forEach((ds) => ds.data.forEach((v) => { if (v !== null && v !== undefined) allVals.push(v); }));
-        if (allVals.length) {
-          const avg = allVals.reduce((a, b) => a + b, 0) / allVals.length;
-          const yPix = chart.scales.y.getPixelForValue(avg);
-          ctx.save();
-          ctx.setLineDash([5, 4]);
-          ctx.strokeStyle = '#b4750a';
-          ctx.lineWidth = 1.4;
-          ctx.beginPath();
-          ctx.moveTo(chart.chartArea.left, yPix);
-          ctx.lineTo(chart.chartArea.right, yPix);
-          ctx.stroke();
-          ctx.restore();
-        }
-        for (let d = 1; d < datasets.length; d++) {
-          const metaPrev = chart.getDatasetMeta(d - 1);
-          const metaCurr = chart.getDatasetMeta(d);
-          const dataPrev = datasets[d - 1].data;
-          const dataCurr = datasets[d].data;
-          for (let m = 0; m < dataCurr.length; m++) {
-            const vPrev = dataPrev[m], vCurr = dataCurr[m];
-            if (!vPrev || vCurr === null || vCurr === undefined) continue;
-            const pPrev = metaPrev.data[m], pCurr = metaCurr.data[m];
-            if (!pPrev || !pCurr) continue;
-            drawYoyArc(ctx, pPrev.x, pPrev.y, pCurr.x, pCurr.y, (vCurr - vPrev) / vPrev, d - 1);
-          }
-        }
+        if (!allVals.length) return;
+        const avg = allVals.reduce((a, b) => a + b, 0) / allVals.length;
+        const yPix = chart.scales.y.getPixelForValue(avg);
+        ctx.save();
+        ctx.setLineDash([5, 4]);
+        ctx.strokeStyle = '#7a5b00';
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.moveTo(chart.chartArea.left, yPix);
+        ctx.lineTo(chart.chartArea.right, yPix);
+        ctx.stroke();
+        ctx.restore();
       },
     };
-  }
-
-  // Dibuja el arco (curva de Bezier cuadrática) entre la barra del año anterior y la del año
-  // siguiente para un mismo mes, con punta de flecha y burbuja de variación %. `nivel` separa
-  // verticalmente los arcos cuando hay más de un par de años (3 años → 2 pares de flechas).
-  function drawYoyArc(ctx, x1, y1, x2, y2, pct, nivel) {
-    const midX = (x1 + x2) / 2;
-    const topY = Math.min(y1, y2) - 24 - nivel * 30;
-    ctx.save();
-    const color = pct >= 0 ? '#1c8a4b' : '#c23b3b';
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 1.6;
-    ctx.beginPath();
-    ctx.moveTo(x1, y1 - 6);
-    ctx.quadraticCurveTo(midX, topY, x2, y2 - 6);
-    ctx.stroke();
-    drawArrowHead(ctx, x2, y2 - 6, midX, topY, color);
-    drawPctBubble(ctx, midX, topY - 3, (pct >= 0 ? '+' : '') + (pct * 100).toFixed(1) + '%', color);
-    ctx.restore();
-  }
-
-  function drawArrowHead(ctx, tipX, tipY, fromX, fromY, color) {
-    const angle = Math.atan2(tipY - fromY, tipX - fromX);
-    const size = 5;
-    ctx.beginPath();
-    ctx.moveTo(tipX, tipY);
-    ctx.lineTo(tipX - size * Math.cos(angle - Math.PI / 6), tipY - size * Math.sin(angle - Math.PI / 6));
-    ctx.lineTo(tipX - size * Math.cos(angle + Math.PI / 6), tipY - size * Math.sin(angle + Math.PI / 6));
-    ctx.closePath();
-    ctx.fillStyle = color;
-    ctx.fill();
-  }
-
-  function drawPctBubble(ctx, x, y, text, color) {
-    ctx.font = '700 10px "Segoe UI", Arial, sans-serif';
-    const paddingX = 6, h = 15, rx = h / 2;
-    const w = ctx.measureText(text).width + paddingX * 2;
-    ctx.beginPath();
-    ctx.moveTo(x - w / 2 + rx, y - h / 2);
-    ctx.arcTo(x + w / 2, y - h / 2, x + w / 2, y + h / 2, rx);
-    ctx.arcTo(x + w / 2, y + h / 2, x - w / 2, y + h / 2, rx);
-    ctx.arcTo(x - w / 2, y + h / 2, x - w / 2, y - h / 2, rx);
-    ctx.arcTo(x - w / 2, y - h / 2, x + w / 2, y - h / 2, rx);
-    ctx.closePath();
-    ctx.fillStyle = color;
-    ctx.fill();
-    ctx.fillStyle = '#fff';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(text, x, y + 0.5);
   }
 
   function shortNum(v) {
@@ -813,7 +743,7 @@
       const yearLabels = sparkYears.map(String);
       makeSparkline(document.getElementById('spark-vis'), 'sparkVis', yearLabels, sparkVis, '#2471c9');
       makeSparkline(document.getElementById('spark-win'), 'sparkWin', yearLabels, sparkWin, '#16a085');
-      makeSparkline(document.getElementById('spark-ticket'), 'sparkTicket', yearLabels, sparkTicket, '#c9a227');
+      makeSparkline(document.getElementById('spark-ticket'), 'sparkTicket', yearLabels, sparkTicket, '#6aa80f');
     }
 
     // Ranking horizontal — todos los casinos, por Visitas
@@ -1499,18 +1429,14 @@
       <div class="section-title">Visitas</div>
       <div class="card">
         <div class="yoy-legend" id="mensual-legend-visitas"></div>
-        <div class="yoy-row">
-          <div class="yoy-row-body"><div class="chart-wrap tall"><canvas id="chart-mensual-visitas"></canvas></div></div>
-          <div class="yoy-total-panel" id="mensual-total-visitas"></div>
-        </div>
+        <div class="chart-wrap tall"><canvas id="chart-mensual-visitas"></canvas></div>
+        <div class="yoy-monthly-table" id="mensual-table-visitas"></div>
       </div>
       <div class="section-title">Ingresos Brutos del Juego</div>
       <div class="card">
         <div class="yoy-legend" id="mensual-legend-ingresos"></div>
-        <div class="yoy-row">
-          <div class="yoy-row-body"><div class="chart-wrap tall"><canvas id="chart-mensual-ingresos"></canvas></div></div>
-          <div class="yoy-total-panel" id="mensual-total-ingresos"></div>
-        </div>
+        <div class="chart-wrap tall"><canvas id="chart-mensual-ingresos"></canvas></div>
+        <div class="yoy-monthly-table" id="mensual-table-ingresos"></div>
       </div>
       <div class="section-title">Comparar grupo controlador o casino</div>
       <div class="section-sub">Compara un grupo controlador o un casino contra otro grupo, otro casino o el promedio de la industria, en el año o mes que elijas.</div>
@@ -1613,13 +1539,14 @@
     // Eje del gráfico: 'Visitas' es un conteo (shortNumPlain, sin prefijo de moneda);
     // 'Ingresos Brutos' respeta el modo de valor vigente (shortNum, con $/UF/US$).
     // Cada fila tiene su propia leyenda de años (mensual-legend-*), pegada al título de su
-    // propio gráfico, para que no se confunda con la leyenda de la otra fila ni se sobreponga
-    // con el panel de totales.
-    drawYoyRow('chart-mensual-visitas', 'mensualVisitas', years, visSeries, fmtNum, shortNumPlain, 'mensual-total-visitas', 'mensual-legend-visitas');
-    drawYoyRow('chart-mensual-ingresos', 'mensualIngresos', years, ingSeries, fmtMoneyAuto, shortNum, 'mensual-total-ingresos', 'mensual-legend-ingresos');
+    // propio gráfico, para que no se confunda con la leyenda de la otra fila. Los totales y
+    // variaciones % ya no se muestran junto al gráfico: quedan en la tabla de detalle mensual
+    // al pie (ver mensualVariationTableHtml), que incluye la misma información sin duplicarla.
+    drawYoyRow('chart-mensual-visitas', 'mensualVisitas', years, visSeries, fmtNum, shortNumPlain, 'mensual-legend-visitas', 'mensual-table-visitas');
+    drawYoyRow('chart-mensual-ingresos', 'mensualIngresos', years, ingSeries, fmtMoneyAuto, shortNum, 'mensual-legend-ingresos', 'mensual-table-ingresos');
   }
 
-  function drawYoyRow(canvasId, chartKey, years, series, fmtFn, axisFmt, totalPanelId, legendId) {
+  function drawYoyRow(canvasId, chartKey, years, series, fmtFn, axisFmt, legendId, tableContainerId) {
     const datasets = years.map((y, i) => ({
       label: String(y),
       data: series.monthlyByYear[y],
@@ -1644,14 +1571,44 @@
       if (!any) return null;
       return vals.reduce((a, v) => a + (v || 0), 0);
     };
-    let html = `<div class="yoy-total-panel-title">Total ${parcial ? 'Acum. ' + MONTHS_ES[cutoff - 1] : 'Año'}</div>`;
+
+    document.getElementById(tableContainerId).innerHTML = mensualVariationTableHtml(years, series, fmtFn, cutoff, parcial, totalHasta);
+  }
+
+  // Tabla de detalle mensual al pie del gráfico: meses en columnas (igual que el eje del
+  // gráfico) y años + variación % en filas — una fila por año con sus 12 valores mensuales, y
+  // entre cada par de años consecutivos una fila de Var.% mes a mes (el mismo dato que antes
+  // mostraban las flechas/burbujas sobre las barras, ahora en formato tabla para que no se
+  // amontone al comparar 3 años a la vez).
+  function mensualVariationTableHtml(years, series, fmtFn, cutoff, parcial, totalHasta) {
+    const totalLabel = `Total ${parcial ? 'Acum. ' + MONTHS_ES[cutoff - 1] : 'Año'}`;
+    const thead = '<th>Año</th>' + MONTHS_ES.map((m) => `<th class="num">${m}</th>`).join('') +
+      `<th class="num">${totalLabel}</th>`;
+    let rows = '';
     years.forEach((y, i) => {
+      let row = `<td><span class="legend-dot" style="background:${YEAR_COLORS[i % YEAR_COLORS.length]}"></span>${y}</td>`;
+      for (let m = 0; m < 12; m++) {
+        const val = series.monthlyByYear[y][m];
+        row += `<td class="num">${val === null || val === undefined ? '—' : fmtFn(val)}</td>`;
+      }
       const total = totalHasta(y);
-      const prevTotal = i > 0 ? totalHasta(years[i - 1]) : null;
-      const delta = i > 0 ? yoy(total, prevTotal) : null;
-      html += `<div class="yoy-total-row"><span class="legend-dot" style="background:${YEAR_COLORS[i % YEAR_COLORS.length]}"></span>${y}: <strong>${fmtFn(total)}</strong> ${delta !== null ? fmtPctDelta(delta) : ''}</div>`;
+      row += `<td class="num"><strong>${total === null || total === undefined ? '—' : fmtFn(total)}</strong></td>`;
+      rows += `<tr>${row}</tr>`;
+
+      if (i > 0) {
+        let vrow = `<td>Var.% ${years[i - 1]}→${y}</td>`;
+        for (let m = 0; m < 12; m++) {
+          const val = series.monthlyByYear[y][m];
+          const prevVal = series.monthlyByYear[years[i - 1]][m];
+          const delta = (val === null || val === undefined) ? null : yoy(val, prevVal);
+          vrow += `<td class="num">${fmtPctDelta(delta)}</td>`;
+        }
+        const prevTotal = totalHasta(years[i - 1]);
+        vrow += `<td class="num">${fmtPctDelta(yoy(total, prevTotal))}</td>`;
+        rows += `<tr class="subtotal-row">${vrow}</tr>`;
+      }
     });
-    document.getElementById(totalPanelId).innerHTML = html;
+    return `<div class="table-scroll"><table class="data-table"><thead><tr>${thead}</tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   // ---------------------------------------------------------------------
@@ -2006,7 +1963,7 @@
     makeLineChart(document.getElementById('chart-equip-evol'), 'equipEvol', labels, [
       { label: 'Máquinas de azar', data: totMaquinas, borderColor: '#2471c9', backgroundColor: 'rgba(36,113,201,.12)', fill: true, tension: 0.2 },
       {
-        label: 'Mesas de juego', data: totMesasInterp.values, borderColor: '#c9a227', backgroundColor: 'rgba(201,162,39,.12)', fill: true, tension: 0.2,
+        label: 'Mesas de juego', data: totMesasInterp.values, borderColor: '#6aa80f', backgroundColor: 'rgba(106,168,15,.12)', fill: true, tension: 0.2,
         segment: { borderDash: (ctx) => (totMesasInterp.isInterp[ctx.p0DataIndex] || totMesasInterp.isInterp[ctx.p1DataIndex]) ? [6, 4] : undefined },
       },
       { label: 'Posiciones de bingo', data: totBingo, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,.12)', fill: true, tension: 0.2 },

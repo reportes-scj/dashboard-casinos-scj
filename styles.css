@@ -218,9 +218,17 @@ select, .chip-select {
   .yoy-total-panel { flex: 1 1 auto; }
 }
 
+/* ---------- Descarga individual de tablas ---------- */
+.table-export-btn {
+  display: inline-flex; align-items: center; gap: 5px; margin: 0 0 6px; padding: 4px 10px;
+  font-size: 11.5px; font-weight: 600; color: var(--navy); background: #fff;
+  border: 1px solid var(--border); border-radius: 6px; cursor: pointer;
+}
+.table-export-btn:hover { background: #f0f2f8; border-color: var(--blue-accent); }
+
 /* ---------- Impresión / exportación a PDF ---------- */
 @media print {
-  .topbar-controls, .tabs, #btn-export-pdf, .filter-row { display: none !important; }
+  .topbar-controls, .tabs, #btn-export-pdf, .filter-row, .table-export-btn { display: none !important; }
   body { background: #fff; font-size: 11px; }
   main { padding: 0; max-width: none; }
   .view { display: none !important; }

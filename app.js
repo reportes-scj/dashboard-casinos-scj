@@ -2527,6 +2527,76 @@ ${sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.open
   }
 
   // ---------------------------------------------------------------------
+  // Descarga individual de cada tabla como Excel
+  // ---------------------------------------------------------------------
+
+  // Deriva un título legible para una tabla a partir del .section-title más cercano que la
+  // precede en el orden del documento (ya sea como hermano antes de su .card, o como primer
+  // hijo dentro de la propia .card — ambos patrones se usan indistintamente en el dashboard),
+  // para usarlo como nombre de hoja y de archivo sin anotar manualmente cada tabla.
+  function tablaTitulo(table) {
+    const titulos = document.querySelectorAll('#app .section-title');
+    let mejor = null;
+    titulos.forEach((t) => {
+      if (t.compareDocumentPosition(table) & Node.DOCUMENT_POSITION_FOLLOWING) mejor = t;
+    });
+    if (mejor) return mejor.textContent.trim();
+    const vista = table.closest('.view');
+    if (vista && vista.id) return vista.id.replace('view-', 'Vista ');
+    return 'Tabla';
+  }
+
+  function sanitizeArchivo(s) {
+    return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-zA-Z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 60) || 'Tabla';
+  }
+
+  function sanitizeHoja(s) {
+    const limpio = s.replace(/[[\]:*?/\\]/g, ' ').trim();
+    return limpio.slice(0, 31) || 'Tabla';
+  }
+
+  // Exporta una tabla ya renderizada en el DOM (thead/tbody) a un .xlsx real, leyendo el texto
+  // tal como se ve en pantalla (con $, UF, US$, %, MM y flechas ▲▼ incluidos), reutilizando la
+  // infraestructura de generarExcelHistorico() — sin librerías externas, respetando la CSP.
+  function exportarTablaDom(table) {
+    const headers = Array.from(table.querySelectorAll('thead th')).map((th) => th.textContent.trim());
+    const rows = Array.from(table.querySelectorAll('tbody tr')).map((tr) =>
+      Array.from(tr.children).map((td) => td.textContent.trim())
+    );
+    const titulo = tablaTitulo(table);
+    const xlsx = buildXlsxWorkbook([{ name: sanitizeHoja(titulo), headers, rows, numericCols: new Set() }]);
+    descargarArchivo(`SCJ_${sanitizeArchivo(titulo)}_${new Date().toISOString().slice(0, 10)}.xlsx`, xlsx, XLSX_MIME);
+  }
+
+  // Inserta (si falta) un botón "Descargar Excel" justo antes de cada tabla visible, anclado
+  // antes del contenedor .table-scroll cuando existe (para que no quede atrapado dentro del
+  // área con scroll horizontal). Se apoya en un MutationObserver porque varias tablas —el
+  // comparador de Resumen Mensual entre ellas— se reconstruyen fuera de renderCurrentView()
+  // mediante handlers 'onchange' directos, así que un solo punto de enganche no bastaría.
+  function ensureTableExportButtons() {
+    document.querySelectorAll('#app table.data-table').forEach((table) => {
+      const anclaje = table.closest('.table-scroll') || table;
+      const prev = anclaje.previousElementSibling;
+      if (prev && prev.classList.contains('table-export-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'table-export-btn';
+      btn.textContent = '⬇ Excel';
+      btn.title = 'Descargar esta tabla como Excel';
+      btn.addEventListener('click', () => exportarTablaDom(table));
+      anclaje.parentNode.insertBefore(btn, anclaje);
+    });
+  }
+
+  function setupTableExportButtons() {
+    ensureTableExportButtons();
+    const app = document.getElementById('app');
+    const observer = new MutationObserver(() => ensureTableExportButtons());
+    observer.observe(app, { childList: true, subtree: true });
+  }
+
+  // ---------------------------------------------------------------------
   // Vista: Administración (carga manual de datos)
   // ---------------------------------------------------------------------
 
@@ -2873,6 +2943,7 @@ ${sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.open
       setupAdmin();
       renderResumen();
       actualizarIndicadores();
+      setupTableExportButtons();
     } catch (e) {
       document.getElementById('app').innerHTML = `<div class="card"><strong>Error al cargar datos:</strong> ${e.message}</div>`;
       console.error(e);

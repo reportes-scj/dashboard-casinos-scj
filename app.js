@@ -2559,13 +2559,31 @@ ${sheets.map((s, i) => `<Relationship Id="rId${i + 1}" Type="http://schemas.open
   // Exporta una tabla ya renderizada en el DOM (thead/tbody) a un .xlsx real, leyendo el texto
   // tal como se ve en pantalla (con $, UF, US$, %, MM y flechas ▲▼ incluidos), reutilizando la
   // infraestructura de generarExcelHistorico() — sin librerías externas, respetando la CSP.
+  // Calcula un ancho de columna "autofit" (en unidades de caracteres de Excel) a partir del
+  // texto más largo entre el encabezado y todos los datos de esa columna, con un mínimo y un
+  // máximo razonables para que ni las columnas cortas queden angostas ni las de nombres largos
+  // (p. ej. "Nombre comercial") se disparen sin control.
+  function calcularAnchosColumnas(headers, rows) {
+    const anchos = {};
+    headers.forEach((h, ci) => {
+      let max = (h || '').length;
+      rows.forEach((r) => {
+        const len = (r[ci] || '').length;
+        if (len > max) max = len;
+      });
+      anchos[ci] = Math.min(Math.max(max + 3, 11), 42);
+    });
+    return anchos;
+  }
+
   function exportarTablaDom(table) {
     const headers = Array.from(table.querySelectorAll('thead th')).map((th) => th.textContent.trim());
     const rows = Array.from(table.querySelectorAll('tbody tr')).map((tr) =>
       Array.from(tr.children).map((td) => td.textContent.trim())
     );
     const titulo = tablaTitulo(table);
-    const xlsx = buildXlsxWorkbook([{ name: sanitizeHoja(titulo), headers, rows, numericCols: new Set() }]);
+    const colWidths = calcularAnchosColumnas(headers, rows);
+    const xlsx = buildXlsxWorkbook([{ name: sanitizeHoja(titulo), headers, rows, numericCols: new Set(), colWidths }]);
     descargarArchivo(`SCJ_${sanitizeArchivo(titulo)}_${new Date().toISOString().slice(0, 10)}.xlsx`, xlsx, XLSX_MIME);
   }
 

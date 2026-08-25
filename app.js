@@ -30,13 +30,24 @@
     'Boldt - Invergaming': 'Otros', 'Fundación Cardoen': 'Otros', 'Simunovic - Enjoy': 'Otros',
   };
   // Paleta para el Resumen Mensual (año contra año): de más antiguo (claro) a más reciente (oscuro).
-  const YEAR_COLORS = ['#a9c3de', '#1e5aa8', '#123a6b'];
+  const YEAR_COLORS = ['#c8e0a0', '#6aa80f', '#3f6b09'];
   const CASINO_PALETTE = [
     '#2471c9', '#e74c3c', '#16a085', '#f39c12', '#8e44ad', '#27ae60', '#c0392b', '#34495e',
     '#d4a017', '#7f8c8d', '#2980b9', '#e67e22', '#1abc9c', '#9b59b6', '#95a5a6',
     '#e84393', '#5c6bc0', '#7cb342', '#00acc1', '#8d6e63', '#ad1457', '#00695c', '#ff7043',
     '#546e7a', '#9e9d24',
   ];
+  // Degradado de verdes (oscuro→claro) para rankings ordenados por valor, del más alto al más bajo.
+  function greenShades(n) {
+    if (n <= 1) return ['#2f6d1f'];
+    const out = [];
+    for (let i = 0; i < n; i++) {
+      const t = i / (n - 1);
+      const lightness = 24 + t * 48; // 24% (oscuro) → 72% (claro)
+      out.push(`hsl(100, 45%, ${lightness}%)`);
+    }
+    return out;
+  }
 
   let RAW = null;
   let CASINOS = [];       // metadata array
@@ -750,19 +761,17 @@
     const rankingVis = CASINOS.map((c) => ({
       casino: c.Casino,
       valor: sumFlowNominal([c.Casino], year, 'Visitas', hastaMes).valor || 0,
-      color: HOLDING_COLORS[c.Holding] || '#888',
     })).sort((a, b) => b.valor - a.valor);
     makeHBar(document.getElementById('chart-resumen-ranking-visitas'), 'resumenRankingVisitas',
-      rankingVis.map((r) => r.casino), rankingVis.map((r) => r.valor), rankingVis.map((r) => r.color), fmtNum);
+      rankingVis.map((r) => r.casino), rankingVis.map((r) => r.valor), greenShades(rankingVis.length), fmtNum);
 
     // Ranking horizontal — todos los casinos, por Ingresos Brutos
     const ranking = CASINOS.map((c) => ({
       casino: c.Casino,
       valor: aggFlowReal([c.Casino], year, 'Win Total', hastaMes).valor || 0,
-      color: HOLDING_COLORS[c.Holding] || '#888',
     })).sort((a, b) => b.valor - a.valor);
     makeHBar(document.getElementById('chart-resumen-ranking'), 'resumenRanking',
-      ranking.map((r) => r.casino), ranking.map((r) => r.valor), ranking.map((r) => r.color), fmtMoneyMM);
+      ranking.map((r) => r.casino), ranking.map((r) => r.valor), greenShades(ranking.length), fmtMoneyMM);
 
     renderTablaGrupos(document.getElementById('tabla-resumen-grupos'), year, prevYear, hastaMes);
     renderTablaGruposVisitas(document.getElementById('tabla-resumen-visitas'), year, prevYear, hastaMes);
@@ -1908,7 +1917,7 @@
       <div class="card">
         <div class="section-title" style="margin-top:0;">Evolución de la industria</div>
         <div class="chart-wrap tall"><canvas id="chart-equip-evol"></canvas></div>
-        <p class="small muted" style="margin-bottom:0;">* Los Informes Anuales SCJ 2018, 2019 y 2020 no reportaron mesas de juego físicas (solo posiciones de juego). El tramo 2018–2020 de "Mesas de juego" (línea segmentada) es una estimación por interpolación lineal entre 2017 y 2021, no un dato oficial. Máquinas de azar y posiciones de bingo sí están disponibles para todo el período.</p>
+        <p class="small muted" style="margin-bottom:0;">* Los Informes Anuales SCJ 2018, 2019 y 2020 no reportaron mesas de juego físicas (solo posiciones de juego). Las barras de "Mesas de juego" en tono más claro (2018–2020) son una estimación por interpolación lineal entre 2017 y 2021, no un dato oficial. Máquinas de azar y posiciones de bingo sí están disponibles para todo el período.</p>
       </div>
       <div class="grid-2">
         <div class="card">
@@ -1960,14 +1969,14 @@
     });
 
     const totMesasInterp = interpolateGaps(totMesas);
-    makeLineChart(document.getElementById('chart-equip-evol'), 'equipEvol', labels, [
-      { label: 'Máquinas de azar', data: totMaquinas, borderColor: '#2471c9', backgroundColor: 'rgba(36,113,201,.12)', fill: true, tension: 0.2 },
-      {
-        label: 'Mesas de juego', data: totMesasInterp.values, borderColor: '#6aa80f', backgroundColor: 'rgba(106,168,15,.12)', fill: true, tension: 0.2,
-        segment: { borderDash: (ctx) => (totMesasInterp.isInterp[ctx.p0DataIndex] || totMesasInterp.isInterp[ctx.p1DataIndex]) ? [6, 4] : undefined },
-      },
-      { label: 'Posiciones de bingo', data: totBingo, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,.12)', fill: true, tension: 0.2 },
-    ], { scales: { y: { ticks: { callback: (v) => fmtNum(v) } } } }, true);
+    // Años con "Mesas de juego" estimada por interpolación (sin dato oficial SCJ) se pintan en un
+    // tono más claro dentro de la misma serie, para distinguirlas sin necesitar una leyenda aparte.
+    const mesasColors = effYears.map((_, i) => totMesasInterp.isInterp[i] ? 'rgba(106,168,15,.4)' : '#6aa80f');
+    makeBarChart(document.getElementById('chart-equip-evol'), 'equipEvol', labels, [
+      { label: 'Máquinas de azar', data: totMaquinas, backgroundColor: '#1b4d0a' },
+      { label: 'Mesas de juego', data: totMesasInterp.values, backgroundColor: mesasColors },
+      { label: 'Posiciones de bingo', data: totBingo, backgroundColor: '#a9d67a' },
+    ], { scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: (v) => fmtNum(v) } } } });
 
     const byCasinoLatest = {};
     EQUIPAMIENTO.filter((r) => r.anio === yLatest).forEach((r) => { byCasinoLatest[r.casino] = r; });

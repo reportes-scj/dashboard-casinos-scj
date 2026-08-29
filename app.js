@@ -8,46 +8,36 @@
     'Enjoy', 'Casinos de Chile', 'Dreams', 'Marina del Sol', 'Luckia',
     'Corporación Meier', 'Boldt - Invergaming', 'Fundación Cardoen', 'Simunovic - Enjoy',
   ];
-  const HOLDING_COLORS = {
-    'Enjoy': '#e74c3c',
-    'Casinos de Chile': '#16a085',
-    'Dreams': '#8e44ad',
-    'Marina del Sol': '#2471c9',
-    'Luckia': '#d4a017',
-    'Corporación Meier': '#34495e',
-    'Boldt - Invergaming': '#27ae60',
-    'Fundación Cardoen': '#a0522d',
-    'Simunovic - Enjoy': '#7f8c8d',
-  };
   const GRUPO_ORDER = ['Enjoy', 'Casinos de Chile', 'Dreams', 'Marina del Sol', 'Otros'];
-  const GRUPO_COLORS = {
-    'Enjoy': '#e74c3c', 'Casinos de Chile': '#16a085', 'Dreams': '#8e44ad',
-    'Marina del Sol': '#2471c9', 'Otros': '#95a5a6',
-  };
   const GRUPO_GRANDE_MAP = {
     'Enjoy': 'Enjoy', 'Casinos de Chile': 'Casinos de Chile', 'Dreams': 'Dreams',
     'Marina del Sol': 'Marina del Sol', 'Luckia': 'Otros', 'Corporación Meier': 'Otros',
     'Boldt - Invergaming': 'Otros', 'Fundación Cardoen': 'Otros', 'Simunovic - Enjoy': 'Otros',
   };
-  // Paleta para el Resumen Mensual (año contra año): de más antiguo (claro) a más reciente (oscuro).
-  const YEAR_COLORS = ['#c8e0a0', '#6aa80f', '#3f6b09'];
-  const CASINO_PALETTE = [
-    '#2471c9', '#e74c3c', '#16a085', '#f39c12', '#8e44ad', '#27ae60', '#c0392b', '#34495e',
-    '#d4a017', '#7f8c8d', '#2980b9', '#e67e22', '#1abc9c', '#9b59b6', '#95a5a6',
-    '#e84393', '#5c6bc0', '#7cb342', '#00acc1', '#8d6e63', '#ad1457', '#00695c', '#ff7043',
-    '#546e7a', '#9e9d24',
-  ];
-  // Degradado de verdes (oscuro→claro) para rankings ordenados por valor, del más alto al más bajo.
-  function greenShades(n) {
-    if (n <= 1) return ['#2f6d1f'];
+  // Paleta para el Resumen Mensual (año contra año): de más antiguo (claro) a más reciente
+  // (oscuro), dentro de la paleta "Finanzas & Banca" (navy/celeste).
+  const YEAR_COLORS = ['#a9c9e3', '#1F4E78', '#0B1F33'];
+  // Degradado de azules ("Finanzas & Banca": navy oscuro → celeste claro) para rankings
+  // ordenados por valor, del más alto (oscuro) al más bajo (claro). Reemplaza la paleta
+  // categórica multicolor en gráficos donde solo importa el orden, no la identidad fija de
+  // cada entidad (para identidad fija por holding, ver HOLDING_TONES más abajo).
+  function brandShades(n) {
+    if (n <= 1) return ['#1F4E78'];
     const out = [];
     for (let i = 0; i < n; i++) {
       const t = i / (n - 1);
-      const lightness = 24 + t * 48; // 24% (oscuro) → 72% (claro)
-      out.push(`hsl(100, 45%, ${lightness}%)`);
+      const lightness = 14 + t * 55; // 14% (navy oscuro) → 69% (celeste claro)
+      out.push(`hsl(209, 55%, ${lightness}%)`);
     }
     return out;
   }
+
+  // Tono de azul fijo por holding (misma identidad en toda la app: Resumen Ejecutivo, Holdings,
+  // Equipamiento), en vez de la paleta categórica multicolor que tenía antes cada holding.
+  // El orden es el de HOLDING_ORDER (Tabla N°2 SCJ), no un ranking por tamaño, para que un mismo
+  // holding conserve siempre el mismo tono sin importar la vista o el período.
+  const HOLDING_TONES = {};
+  brandShades(HOLDING_ORDER.length).forEach((color, i) => { HOLDING_TONES[HOLDING_ORDER[i]] = color; });
 
   let RAW = null;
   let CASINOS = [];       // metadata array
@@ -717,9 +707,43 @@
     const sparkWin = sparkYears.map((y) => aggFlowReal(all, y, 'Win Total', hastaMes).valor);
     const sparkTicket = sparkYears.map((y, i) => ticketPromedio(sparkWin[i], sparkVis[i]));
 
+    // Ranking horizontal — todos los casinos, por Visitas
+    const rankingVis = CASINOS.map((c) => ({
+      casino: c.Casino,
+      valor: sumFlowNominal([c.Casino], year, 'Visitas', hastaMes).valor || 0,
+    })).sort((a, b) => b.valor - a.valor);
+
+    // Ranking horizontal — todos los casinos, por Ingresos Brutos
+    const ranking = CASINOS.map((c) => ({
+      casino: c.Casino,
+      valor: aggFlowReal([c.Casino], year, 'Win Total', hastaMes).valor || 0,
+    })).sort((a, b) => b.valor - a.valor);
+
+    // Holding con mayor y menor Var.% de Ingresos Brutos, para el panel de narrativa.
+    const holdingMovers = HOLDING_ORDER.map((h) => {
+      const casinosH = casinosFor('holding', h);
+      const act = aggFlowReal(casinosH, year, 'Win Total', hastaMes).valor || 0;
+      const prev = aggFlowReal(casinosH, prevYear, 'Win Total', hastaMes).valor || 0;
+      return { h, act, delta: yoy(act, prev) };
+    }).filter((r) => r.delta !== null && r.act > 0);
+    const bestHolding = holdingMovers.length ? holdingMovers.reduce((a, b) => (b.delta > a.delta ? b : a)) : null;
+    const worstHolding = holdingMovers.length ? holdingMovers.reduce((a, b) => (b.delta < a.delta ? b : a)) : null;
+
+    const totalWinAct = ranking.reduce((a, r) => a + r.valor, 0);
+    const leaderShare = totalWinAct ? ranking[0].valor / totalWinAct : null;
+
+    const bullets = [
+      `Las visitas ${deltaClass(yoy(vis.valor, visPrev.valor)) === 'negative' ? 'cayeron' : 'crecieron'} ${fmtPctDelta(yoy(vis.valor, visPrev.valor))} y los ingresos brutos del juego ${deltaClass(yoy(win.valor, winPrev.valor)) === 'negative' ? 'cayeron' : 'crecieron'} ${fmtPctDelta(yoy(win.valor, winPrev.valor))} respecto a igual período de ${prevYear}.`,
+      ranking.length ? `<strong>${ranking[0].casino}</strong> lidera el ranking de ingresos brutos con ${fmtMoneyMM(ranking[0].valor)} (${fmtPctPlain(leaderShare)} de participación de la industria).` : '',
+      bestHolding && worstHolding && bestHolding.h !== worstHolding.h
+        ? `Por holding, <strong>${bestHolding.h}</strong> mostró el mayor crecimiento (${fmtPctDelta(bestHolding.delta)}), mientras <strong>${worstHolding.h}</strong> registró la mayor caída (${fmtPctDelta(worstHolding.delta)}).`
+        : '',
+    ];
+
     el.innerHTML = `
       <div class="section-title">Resumen Ejecutivo</div>
       <div class="section-sub">${periodoLabel} vs. igual período ${prevYear} · valores ${valueModeLabel()}</div>
+      ${insightsPanel(bullets)}
       <div class="kpi-grid">
         ${kpiCard('Visitas totales', fmtNum(vis.valor), yoy(vis.valor, visPrev.valor), false, hasSpark ? 'spark-vis' : null)}
         ${kpiCard('Ingresos Brutos del Juego', fmtMoneyMM(win.valor), yoy(win.valor, winPrev.valor), false, hasSpark ? 'spark-win' : null)}
@@ -752,26 +776,17 @@
 
     if (hasSpark) {
       const yearLabels = sparkYears.map(String);
-      makeSparkline(document.getElementById('spark-vis'), 'sparkVis', yearLabels, sparkVis, '#2471c9');
-      makeSparkline(document.getElementById('spark-win'), 'sparkWin', yearLabels, sparkWin, '#16a085');
-      makeSparkline(document.getElementById('spark-ticket'), 'sparkTicket', yearLabels, sparkTicket, '#6aa80f');
+      makeSparkline(document.getElementById('spark-vis'), 'sparkVis', yearLabels, sparkVis, '#1F4E78');
+      makeSparkline(document.getElementById('spark-win'), 'sparkWin', yearLabels, sparkWin, '#0B1F33');
+      makeSparkline(document.getElementById('spark-ticket'), 'sparkTicket', yearLabels, sparkTicket, '#5B9BD5');
     }
 
-    // Ranking horizontal — todos los casinos, por Visitas
-    const rankingVis = CASINOS.map((c) => ({
-      casino: c.Casino,
-      valor: sumFlowNominal([c.Casino], year, 'Visitas', hastaMes).valor || 0,
-    })).sort((a, b) => b.valor - a.valor);
+    // Rankings horizontales (Visitas e Ingresos Brutos) — datos ya calculados arriba para el panel de narrativa.
     makeHBar(document.getElementById('chart-resumen-ranking-visitas'), 'resumenRankingVisitas',
-      rankingVis.map((r) => r.casino), rankingVis.map((r) => r.valor), greenShades(rankingVis.length), fmtNum);
+      rankingVis.map((r) => r.casino), rankingVis.map((r) => r.valor), brandShades(rankingVis.length), fmtNum);
 
-    // Ranking horizontal — todos los casinos, por Ingresos Brutos
-    const ranking = CASINOS.map((c) => ({
-      casino: c.Casino,
-      valor: aggFlowReal([c.Casino], year, 'Win Total', hastaMes).valor || 0,
-    })).sort((a, b) => b.valor - a.valor);
     makeHBar(document.getElementById('chart-resumen-ranking'), 'resumenRanking',
-      ranking.map((r) => r.casino), ranking.map((r) => r.valor), greenShades(ranking.length), fmtMoneyMM);
+      ranking.map((r) => r.casino), ranking.map((r) => r.valor), brandShades(ranking.length), fmtMoneyMM);
 
     renderTablaGrupos(document.getElementById('tabla-resumen-grupos'), year, prevYear, hastaMes);
     renderTablaGruposVisitas(document.getElementById('tabla-resumen-visitas'), year, prevYear, hastaMes);
@@ -782,6 +797,19 @@
     const deltaHtml = noDelta ? '' : `<div class="kpi-delta ${cls}">${delta === null ? 'sin comparación' : deltaIcon(delta) + fmtPct(delta) + ' vs. año anterior'}</div>`;
     const sparkHtml = sparkId ? `<div class="kpi-sparkline"><canvas id="${sparkId}"></canvas></div>` : '';
     return `<div class="kpi-card"><div class="kpi-label">${label}</div><div class="kpi-value">${value}</div>${deltaHtml}${sparkHtml}</div>`;
+  }
+
+  // Panel de narrativa: 1-3 frases con el hallazgo principal de la vista, en lenguaje natural en
+  // vez de obligar al lector a leerlo desde la tabla/gráfico. Se ubica arriba de cada vista
+  // analítica, antes de los KPI/gráficos/tablas de detalle (jerarquía: primero la conclusión,
+  // después la evidencia). Reutiliza la clase .insights-panel ya definida en styles.css.
+  function insightsPanel(bullets) {
+    const items = bullets.filter(Boolean);
+    if (!items.length) return '';
+    return `<div class="card insights-panel">
+      <div class="section-title" style="margin-top:0;">Lo más relevante</div>
+      <ul>${items.map((b) => `<li>${b}</li>`).join('')}</ul>
+    </div>`;
   }
 
   function renderTablaGrupos(container, year, prevYear, hastaMes) {
@@ -799,7 +827,7 @@
     </tr></thead><tbody>`;
     rows.sort((a, b) => b.act - a.act).forEach((r) => {
       html += `<tr>
-        <td><span class="legend-dot" style="background:${HOLDING_COLORS[r.g]}"></span>${r.g}</td>
+        <td><span class="legend-dot" style="background:${HOLDING_TONES[r.g]}"></span>${r.g}</td>
         <td class="num">${fmtMoneyMM(r.act)}</td><td class="num">${fmtMoneyMM(r.prev)}</td>
         <td class="num">${fmtPctDelta(yoy(r.act, r.prev))}</td>
         <td class="num">${fmtPctPlain(totalAct ? r.act / totalAct : null)}</td>
@@ -826,7 +854,7 @@
     </tr></thead><tbody>`;
     rows.sort((a, b) => b.act - a.act).forEach((r) => {
       html += `<tr>
-        <td><span class="legend-dot" style="background:${HOLDING_COLORS[r.g]}"></span>${r.g}</td>
+        <td><span class="legend-dot" style="background:${HOLDING_TONES[r.g]}"></span>${r.g}</td>
         <td class="num">${fmtNum(r.act)}</td><td class="num">${fmtNum(r.prev)}</td>
         <td class="num">${fmtPctDelta(yoy(r.act, r.prev))}</td>
         <td class="num">${fmtPctPlain(totalAct ? r.act / totalAct : null)}</td>
@@ -856,9 +884,24 @@
       ? ` · comparación acumulada Ene–${MONTHS_ES[hastaMesInd - 1]} en todos los años (${yTo} en curso)`
       : '';
 
+    // Serie anual completa del rango (independiente de la granularidad elegida para el gráfico),
+    // usada solo para el panel de narrativa: variación interanual y tendencia de largo plazo.
+    const yearsList = yearsInRange(yFrom, yTo);
+    const ingresosAnual = yearsList.map((y) => aggFlowReal(all, y, 'Win Total', hastaMesInd).valor);
+    const visitasAnual = yearsList.map((y) => sumFlowNominal(all, y, 'Visitas', hastaMesInd).valor);
+    const nInd = yearsList.length;
+    const yoyWinInd = nInd >= 2 ? yoy(ingresosAnual[nInd - 1], ingresosAnual[nInd - 2]) : null;
+    const yoyVisInd = nInd >= 2 ? yoy(visitasAnual[nInd - 1], visitasAnual[nInd - 2]) : null;
+    const trendWinInd = trendGrowthPct(trendlineData(ingresosAnual, yearsList, state.trendFrom));
+    const bulletsInd = [
+      nInd >= 2 ? `En ${yearsList[nInd - 1]}, los ingresos brutos del juego ${deltaClass(yoyWinInd) === 'negative' ? 'cayeron' : 'crecieron'} ${fmtPctDelta(yoyWinInd)} y las visitas ${deltaClass(yoyVisInd) === 'negative' ? 'cayeron' : 'crecieron'} ${fmtPctDelta(yoyVisInd)} respecto al año anterior.` : '',
+      trendWinInd !== null ? `La tendencia de largo plazo de los ingresos brutos es de ${fmtPctDelta(trendWinInd)} entre ${yearsList[0]} y ${yearsList[nInd - 1]}.` : '',
+    ];
+
     el.innerHTML = `
       <div class="section-title">Industria — Serie Histórica</div>
       <div class="section-sub">${yFrom}–${yTo} · valores ${valueModeLabel()}${acumNoteInd}</div>
+      ${insightsPanel(bulletsInd)}
       <div class="filter-row">
         <label>Granularidad</label>
         <select id="sel-granularidad">
@@ -890,10 +933,10 @@
       });
       const sufijoLabel = hastaMesInd < 12 ? ` (Acum. ${MONTHS_ES[hastaMesInd - 1]})` : '';
       makeLineChart(document.getElementById('chart-ind-ingresos'), 'indIngresos', labels,
-        [{ label: 'Ingresos Brutos' + sufijoLabel, data: ingresos, borderColor: '#2471c9', backgroundColor: 'rgba(36,113,201,.12)', fill: true, tension: 0.25 }],
+        [{ label: 'Ingresos Brutos' + sufijoLabel, data: ingresos, borderColor: '#0B1F33', backgroundColor: 'rgba(11,31,51,.12)', fill: true, tension: 0.25 }],
         null, true);
       makeLineChart(document.getElementById('chart-ind-visitas'), 'indVisitas', labels,
-        [{ label: 'Visitas' + sufijoLabel, data: visitas, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,.12)', fill: true, tension: 0.25 }],
+        [{ label: 'Visitas' + sufijoLabel, data: visitas, borderColor: '#5B9BD5', backgroundColor: 'rgba(91,155,213,.12)', fill: true, tension: 0.25 }],
         { scales: { y: { ticks: { callback: (v) => shortNumPlain(v) } } } }, true);
     } else {
       const labels2 = [], ing2 = [], vis2 = [], years2 = [];
@@ -913,10 +956,10 @@
         }
       });
       makeLineChart(document.getElementById('chart-ind-ingresos'), 'indIngresos', labels2,
-        [{ label: 'Ingresos Brutos', data: ing2, borderColor: '#2471c9', backgroundColor: 'rgba(36,113,201,.12)', fill: true, tension: 0.2, pointRadius: 0 }],
+        [{ label: 'Ingresos Brutos', data: ing2, borderColor: '#0B1F33', backgroundColor: 'rgba(11,31,51,.12)', fill: true, tension: 0.2, pointRadius: 0 }],
         null, true, years2);
       makeLineChart(document.getElementById('chart-ind-visitas'), 'indVisitas', labels2,
-        [{ label: 'Visitas', data: vis2, borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,.12)', fill: true, tension: 0.2, pointRadius: 0 }],
+        [{ label: 'Visitas', data: vis2, borderColor: '#5B9BD5', backgroundColor: 'rgba(91,155,213,.12)', fill: true, tension: 0.2, pointRadius: 0 }],
         { scales: { y: { ticks: { callback: (v) => shortNumPlain(v) } } } }, true, years2);
     }
 
@@ -986,9 +1029,31 @@
       ? ` · comparación acumulada Ene–${MONTHS_ES[hastaMesHold - 1]} en todos los años (${yTo} en curso)`
       : '';
 
+    // Panel de narrativa: líder de participación y mayor/menor variación interanual, para no
+    // obligar al lector a recorrer las dos tablas de abajo para encontrar el dato relevante.
+    const prevYearHold = yTo - 1;
+    const holdingRows = HOLDING_ORDER.map((h) => {
+      const casinosH = casinosFor('holding', h);
+      const act = aggFlowReal(casinosH, yTo, 'Win Total', hastaMesHold).valor || 0;
+      const prev = aggFlowReal(casinosH, prevYearHold, 'Win Total', hastaMesHold).valor || 0;
+      return { h, act, delta: yoy(act, prev) };
+    });
+    const totalHoldAct = holdingRows.reduce((a, r) => a + r.act, 0);
+    const leaderHold = holdingRows.slice().sort((a, b) => b.act - a.act)[0];
+    const movers = holdingRows.filter((r) => r.delta !== null && r.act > 0);
+    const bestHold = movers.length ? movers.reduce((a, b) => (b.delta > a.delta ? b : a)) : null;
+    const worstHold = movers.length ? movers.reduce((a, b) => (b.delta < a.delta ? b : a)) : null;
+    const bulletsHold = [
+      leaderHold ? `<strong>${leaderHold.h}</strong> lidera la industria con ${fmtMoneyMM(leaderHold.act)} en ingresos brutos (${fmtPctPlain(totalHoldAct ? leaderHold.act / totalHoldAct : null)} de participación en ${yTo}).` : '',
+      bestHold && worstHold && bestHold.h !== worstHold.h
+        ? `<strong>${bestHold.h}</strong> tuvo el mayor crecimiento interanual (${fmtPctDelta(bestHold.delta)}); <strong>${worstHold.h}</strong>, la mayor caída (${fmtPctDelta(worstHold.delta)}).`
+        : '',
+    ];
+
     el.innerHTML = `
       <div class="section-title">Holdings — Comparación entre grupos controladores</div>
       <div class="section-sub">Clasificación oficial según Tabla N°2, Informe Anual de la Industria 2025 (SCJ) · ${yFrom}–${yTo} · valores ${valueModeLabel()}${acumNoteHold}</div>
+      ${insightsPanel(bulletsHold)}
       <div class="card">
         <div class="section-title" style="margin-top:0;">Evolución de Ingresos Brutos por Holding</div>
         <div class="chart-wrap tall"><canvas id="chart-hold-evol"></canvas></div>
@@ -1011,7 +1076,8 @@
 
     const labels = yearsInRange(yFrom, yTo).map(String);
     const datasets = HOLDING_ORDER.map((h) => ({
-      label: h, borderColor: HOLDING_COLORS[h], backgroundColor: HOLDING_COLORS[h] + '20',
+      label: h, borderColor: HOLDING_TONES[h],
+      backgroundColor: HOLDING_TONES[h].replace('hsl(', 'hsla(').replace(')', ', 0.13)'),
       data: labels.map((y) => aggFlowReal(casinosFor('holding', h), Number(y), 'Win Total', hastaMesHold).valor),
       tension: 0.2, fill: false,
     }));
@@ -1045,7 +1111,7 @@
         <th>Holding</th><th class="num">${year}</th><th class="num">${prevYear}</th><th class="num">Var.%</th><th class="num">% ${year}</th><th class="num">% ${prevYear}</th>
       </tr></thead><tbody>`;
       rows.sort((a, b) => b.act - a.act).forEach((r) => {
-        html += `<tr><td><span class="legend-dot" style="background:${HOLDING_COLORS[r.h]}"></span>${r.h}</td>
+        html += `<tr><td><span class="legend-dot" style="background:${HOLDING_TONES[r.h]}"></span>${r.h}</td>
           <td class="num">${fmtFn(r.act)}</td><td class="num">${fmtFn(r.prev)}</td>
           <td class="num">${fmtPctDelta(yoy(r.act, r.prev))}</td>
           <td class="num">${fmtPctPlain(totalAct ? r.act / totalAct : null)}</td>
@@ -1068,7 +1134,7 @@
       </tr></thead><tbody>`;
       rows.sort((a, b) => b.sum - a.sum).forEach((r) => {
         const val = periodMode === 'promedio' ? r.sum / nYrs : r.sum;
-        html += `<tr><td><span class="legend-dot" style="background:${HOLDING_COLORS[r.h]}"></span>${r.h}</td>
+        html += `<tr><td><span class="legend-dot" style="background:${HOLDING_TONES[r.h]}"></span>${r.h}</td>
           <td class="num">${fmtFn(val)}</td>
           <td class="num">${fmtPctPlain(totalSum ? r.sum / totalSum : null)}</td></tr>`;
       });
@@ -1093,9 +1159,36 @@
       state.casinosSeleccionados = CASINOS.filter((c) => c.Holding === 'Marina del Sol').map((c) => c.Casino);
     }
 
+    // Ranking completo por Ingresos Brutos (todos los casinos, no solo los seleccionados en el
+    // comparador), para el panel de narrativa y el resumen visual "Top 5" antes de la tabla
+    // detallada — un lector puede quedarse con el resumen o profundizar en la tabla completa.
+    const casinoRanking = CASINOS.map((c) => {
+      const act = aggFlowReal([c.Casino], yTo, 'Win Total', hastaMes).valor || 0;
+      const prev = aggFlowReal([c.Casino], prevYear, 'Win Total', hastaMes).valor || 0;
+      return { casino: c.Casino, act, delta: yoy(act, prev) };
+    }).sort((a, b) => b.act - a.act);
+    const totalCasinoAct = casinoRanking.reduce((a, r) => a + r.act, 0);
+    const casinoMovers = casinoRanking.filter((r) => r.delta !== null && r.act > 0);
+    const bestCasino = casinoMovers.length ? casinoMovers.reduce((a, b) => (b.delta > a.delta ? b : a)) : null;
+    const worstCasino = casinoMovers.length ? casinoMovers.reduce((a, b) => (b.delta < a.delta ? b : a)) : null;
+    const bulletsCasinos = [
+      casinoRanking.length ? `<strong>${casinoRanking[0].casino}</strong> lidera con ${fmtMoneyMM(casinoRanking[0].act)} en ingresos brutos (${fmtPctPlain(totalCasinoAct ? casinoRanking[0].act / totalCasinoAct : null)} de la industria).` : '',
+      bestCasino && worstCasino && bestCasino.casino !== worstCasino.casino
+        ? `<strong>${bestCasino.casino}</strong> tuvo el mayor crecimiento interanual (${fmtPctDelta(bestCasino.delta)}); <strong>${worstCasino.casino}</strong>, la mayor caída (${fmtPctDelta(worstCasino.delta)}).`
+        : '',
+    ];
+    const top5Html = casinoRanking.slice(0, 5).map((r, i) => `
+      <div class="top5-row">
+        <span class="top5-rank">${i + 1}</span>
+        <span class="top5-name">${r.casino}</span>
+        <span class="top5-value">${fmtMoneyMM(r.act)}</span>
+        <span class="top5-delta">${fmtPctDelta(r.delta)}</span>
+      </div>`).join('');
+
     el.innerHTML = `
       <div class="section-title">Casinos — Comparador y detalle</div>
       <div class="section-sub">Selecciona uno o más casinos para comparar su evolución · valores ${valueModeLabel()}</div>
+      ${insightsPanel(bulletsCasinos)}
       <div class="card">
         <div class="filter-row">
           <label for="sel-grupo-controlador">Seleccionar por grupo controlador</label>
@@ -1114,7 +1207,11 @@
         <div class="chart-wrap tall"><canvas id="chart-casinos-comp-visitas"></canvas></div>
       </div>
 
+      <div class="section-title">Top 5 — Ingresos Brutos del Juego ${periodoLabel}</div>
+      <div class="card top5-card">${top5Html}</div>
+
       <div class="section-title">Visitas y gasto promedio por casino${state.periodMode === 'anual' ? ` — ${periodoLabel}` : ''}</div>
+      <div class="section-sub" style="margin-top:-4px;">Detalle completo de los ${CASINOS.length} casinos de la industria</div>
       <div class="card">
         ${periodModeSelectHtml('sel-period-mode-casinos')}
         <div class="table-scroll" id="tabla-visitas-casino"></div>
@@ -1181,9 +1278,13 @@
     const hastaMes = monthsWithData(CASINOS.map((c) => c.Casino), yTo, 'Visitas') || 12;
     const sufijoLabel = hastaMes < 12 ? ` (Acum. ${MONTHS_ES[hastaMes - 1]})` : '';
     const labels = yearsInRange(yFrom, yTo).map(String);
+    // Degradado de azules por orden de selección (mismo criterio que Equipamiento): un mismo
+    // casino queda con el mismo tono en este gráfico y en el de Visitas de abajo (ambos recorren
+    // state.casinosSeleccionados en el mismo orden).
+    const casinoTones = brandShades(state.casinosSeleccionados.length);
     const datasets = state.casinosSeleccionados.map((casino, i) => ({
-      label: casino + sufijoLabel, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
-      backgroundColor: CASINO_PALETTE[i % CASINO_PALETTE.length] + '20',
+      label: casino + sufijoLabel, borderColor: casinoTones[i],
+      backgroundColor: casinoTones[i].replace('hsl(', 'hsla(').replace(')', ', 0.13)'),
       data: labels.map((y) => aggFlowReal([casino], Number(y), 'Win Total', hastaMes).valor),
       tension: 0.2, fill: false,
     }));
@@ -1198,9 +1299,10 @@
     const hastaMes = monthsWithData(CASINOS.map((c) => c.Casino), yTo, 'Visitas') || 12;
     const sufijoLabel = hastaMes < 12 ? ` (Acum. ${MONTHS_ES[hastaMes - 1]})` : '';
     const labels = yearsInRange(yFrom, yTo).map(String);
+    const casinoTones = brandShades(state.casinosSeleccionados.length);
     const datasets = state.casinosSeleccionados.map((casino, i) => ({
-      label: casino + sufijoLabel, borderColor: CASINO_PALETTE[i % CASINO_PALETTE.length],
-      backgroundColor: CASINO_PALETTE[i % CASINO_PALETTE.length] + '20',
+      label: casino + sufijoLabel, borderColor: casinoTones[i],
+      backgroundColor: casinoTones[i].replace('hsl(', 'hsla(').replace(')', ', 0.13)'),
       data: labels.map((y) => sumFlowNominal([casino], Number(y), 'Visitas', hastaMes).valor),
       tension: 0.2, fill: false,
     }));
@@ -1865,12 +1967,12 @@
     if (tituloEl) tituloEl.textContent = `${tituloRango} — ${labelA} vs. ${labelB}`;
 
     const dsVis = [
-      { label: labelA, data: serieVisA.data, borderColor: '#2471c9', backgroundColor: '#2471c922', tension: 0.25, pointRadius: 2 },
-      { label: labelB, data: serieVisB.data, borderColor: '#e74c3c', backgroundColor: '#e74c3c22', tension: 0.25, pointRadius: 2 },
+      { label: labelA, data: serieVisA.data, borderColor: '#0B1F33', backgroundColor: '#0B1F3322', tension: 0.25, pointRadius: 2 },
+      { label: labelB, data: serieVisB.data, borderColor: '#5B9BD5', backgroundColor: '#5B9BD522', tension: 0.25, pointRadius: 2 },
     ];
     const dsIng = [
-      { label: labelA, data: serieIngA.data, borderColor: '#2471c9', backgroundColor: '#2471c922', tension: 0.25, pointRadius: 2 },
-      { label: labelB, data: serieIngB.data, borderColor: '#e74c3c', backgroundColor: '#e74c3c22', tension: 0.25, pointRadius: 2 },
+      { label: labelA, data: serieIngA.data, borderColor: '#0B1F33', backgroundColor: '#0B1F3322', tension: 0.25, pointRadius: 2 },
+      { label: labelB, data: serieIngB.data, borderColor: '#5B9BD5', backgroundColor: '#5B9BD522', tension: 0.25, pointRadius: 2 },
     ];
     makeComparadorLineChart(canvasVis, 'comp-chart-visitas', serieVisA.labels, dsVis, {
       plugins: {
@@ -1911,9 +2013,29 @@
     const effYears = yearsInRange(yFrom, yTo).filter((y) => yearSet.has(y));
     const yLatest = effYears.length ? effYears[effYears.length - 1] : years[years.length - 1];
 
+    // Series totales por año — calculadas antes del HTML para poder alimentar el panel de
+    // narrativa (además del gráfico, que las recalcula desde EQUIPAMIENTO más abajo).
+    const totMaquinasEq = [], totBingoEq = [];
+    effYears.forEach((y) => {
+      const rows = EQUIPAMIENTO.filter((r) => r.anio === y);
+      const anyMaq = rows.some((r) => r.maquinas_azar !== null && r.maquinas_azar !== undefined);
+      const anyBingo = rows.some((r) => r.bingo_mesas !== null && r.bingo_mesas !== undefined);
+      totMaquinasEq.push(anyMaq ? rows.reduce((a, r) => a + (r.maquinas_azar || 0), 0) : null);
+      totBingoEq.push(anyBingo ? rows.reduce((a, r) => a + (r.bingo_mesas || 0), 0) : null);
+    });
+    const nEq = effYears.length;
+    const trendMaq = trendGrowthPct(trendlineData(totMaquinasEq, effYears, null));
+    const trendBingo = trendGrowthPct(trendlineData(totBingoEq, effYears, null));
+    const yoyMaqLast = nEq >= 2 ? yoy(totMaquinasEq[nEq - 1], totMaquinasEq[nEq - 2]) : null;
+    const bulletsEq = [
+      trendMaq !== null ? `Las máquinas de azar muestran una tendencia de ${fmtPctDelta(trendMaq)} entre ${effYears[0]} y ${yLatest}, con ${fmtNum(totMaquinasEq[nEq - 1])} unidades en ${yLatest}${nEq >= 2 ? ` (${fmtPctDelta(yoyMaqLast)} vs. ${effYears[nEq - 2]})` : ''}.` : '',
+      trendBingo !== null ? `Las posiciones de bingo muestran una tendencia de ${fmtPctDelta(trendBingo)} en el mismo período, con ${fmtNum(totBingoEq[nEq - 1])} posiciones en ${yLatest}.` : '',
+    ];
+
     el.innerHTML = `
       <div class="section-title">Equipamiento — Máquinas de azar, mesas de juego y bingo</div>
       <div class="section-sub">Fuente: Tablas de equipamiento de los Informes Anuales de la Industria, SCJ (${years[0]}–${years[years.length - 1]}) · ${yFrom}–${yTo}</div>
+      ${insightsPanel(bulletsEq)}
       <div class="card">
         <div class="section-title" style="margin-top:0;">Evolución de la industria</div>
         <div class="chart-wrap tall"><canvas id="chart-equip-evol"></canvas></div>
@@ -1971,11 +2093,11 @@
     const totMesasInterp = interpolateGaps(totMesas);
     // Años con "Mesas de juego" estimada por interpolación (sin dato oficial SCJ) se pintan en un
     // tono más claro dentro de la misma serie, para distinguirlas sin necesitar una leyenda aparte.
-    const mesasColors = effYears.map((_, i) => totMesasInterp.isInterp[i] ? 'rgba(106,168,15,.4)' : '#6aa80f');
+    const mesasColors = effYears.map((_, i) => totMesasInterp.isInterp[i] ? 'rgba(31,78,120,.4)' : '#1F4E78');
     makeBarChart(document.getElementById('chart-equip-evol'), 'equipEvol', labels, [
-      { label: 'Máquinas de azar', data: totMaquinas, backgroundColor: '#1b4d0a' },
+      { label: 'Máquinas de azar', data: totMaquinas, backgroundColor: '#0B1F33' },
       { label: 'Mesas de juego', data: totMesasInterp.values, backgroundColor: mesasColors },
-      { label: 'Posiciones de bingo', data: totBingo, backgroundColor: '#a9d67a' },
+      { label: 'Posiciones de bingo', data: totBingo, backgroundColor: '#5B9BD5' },
     ], { scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: (v) => fmtNum(v) } } } });
 
     const byCasinoLatest = {};
@@ -1994,7 +2116,7 @@
     })).sort((a, b) => b.total - a.total);
     makeDoughnut(document.getElementById(donutId), 'equipDonut_' + metricKey,
       holdingTotalsOrdered.map((r) => r.h), holdingTotalsOrdered.map((r) => r.total),
-      holdingTotalsOrdered.map((r) => HOLDING_COLORS[r.h]), true);
+      holdingTotalsOrdered.map((r) => HOLDING_TONES[r.h]), true);
 
     const datasetsHoldings = HOLDING_ORDER.map((h) => {
       const casinosH = casinosFor('holding', h);
@@ -2008,8 +2130,10 @@
       const interp = metricKey === 'mesas_total' ? interpolateGaps(rawData) : null;
       return {
         label: h,
-        borderColor: HOLDING_COLORS[h],
-        backgroundColor: HOLDING_COLORS[h] + '20',
+        borderColor: HOLDING_TONES[h],
+        // brandShades() devuelve hsl(...), no hex, así que la transparencia se agrega con
+        // hsla(...) en vez del sufijo hex de 2 dígitos que usa el resto del dashboard con hex.
+        backgroundColor: HOLDING_TONES[h].replace('hsl(', 'hsla(').replace(')', ', 0.13)'),
         data: interp ? interp.values : rawData,
         tension: 0.2, fill: false,
         segment: interp ? { borderDash: (ctx) => (interp.isInterp[ctx.p0DataIndex] || interp.isInterp[ctx.p1DataIndex]) ? [6, 4] : undefined } : undefined,

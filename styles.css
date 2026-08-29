@@ -1,15 +1,16 @@
+/* Paleta "Finanzas & Banca": navy marino, azul corporativo, celeste, gris claro, blanco. */
 :root {
-  --navy: #123a6b;
-  --navy-dark: #0d2a4e;
-  --navy-mid: #1e4c82;
-  --blue-accent: #1e5aa8;
-  --gold: #6aa80f;
-  --bg: #f4f6f8;
+  --navy: #0B1F33;
+  --navy-dark: #091a2b;
+  --navy-mid: #1F4E78;
+  --blue-accent: #1F4E78;
+  --gold: #5B9BD5;
+  --bg: #f4f6f9;
   --card-bg: #ffffff;
-  --border: #e2e7ec;
+  --border: #D9E2E8;
   --text: #12181f;
   --text-muted: #4b5866;
-  --row-alt: #f0f2f5;
+  --row-alt: #eef2f6;
   --positive: #006100;
   --negative: #9c0006;
   --warning: #7a5b00;
@@ -121,7 +122,7 @@ main { padding: 22px 28px 60px; max-width: 1440px; margin: 0 auto; }
 /* ---------- Panel de insights ---------- */
 .insights-panel {
   border-left: 4px solid var(--gold);
-  background: linear-gradient(90deg, #f4faea 0%, var(--card-bg) 60%);
+  background: linear-gradient(90deg, #eaf3fb 0%, var(--card-bg) 60%);
 }
 .insights-panel ul { margin: 4px 0 0; padding-left: 20px; }
 .insights-panel li { margin: 6px 0; line-height: 1.5; }
@@ -171,15 +172,15 @@ select, .chip-select {
 
 /* ---------- Badges ---------- */
 .badge { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 11.5px; font-weight: 700; }
-.badge-19995 { background: #dbe9ff; color: #1e5aa8; }
-.badge-municipal { background: #f4b183; color: #7a3b00; }
+.badge-19995 { background: #dbe9ff; color: var(--blue-accent); }
+.badge-municipal { background: var(--border); color: var(--navy); }
 
 /* ---------- Buttons ---------- */
 .btn {
   background: var(--blue-accent); color: #fff; border: none; border-radius: 7px;
   padding: 9px 16px; font-size: 13px; font-weight: 600; cursor: pointer;
 }
-.btn:hover { background: #17457f; }
+.btn:hover { background: var(--navy); }
 .btn-secondary { background: #fff; color: var(--navy); border: 1px solid var(--border); }
 .btn-secondary:hover { background: #f0f2f8; }
 .btn:disabled { opacity: 0.6; cursor: not-allowed; }
@@ -199,6 +200,21 @@ select, .chip-select {
 .text-right { text-align: right; }
 .small { font-size: 12px; }
 .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+
+/* ---------- Top 5 (resumen visual antes de la tabla de detalle completa) ---------- */
+.top5-card { padding: 8px 20px; }
+.top5-row {
+  display: flex; align-items: center; gap: 12px; padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.top5-row:last-child { border-bottom: none; }
+.top5-rank {
+  flex: 0 0 24px; height: 24px; border-radius: 50%; background: var(--navy); color: #fff;
+  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.top5-name { flex: 1 1 auto; font-weight: 600; }
+.top5-value { flex: 0 0 auto; font-variant-numeric: tabular-nums; color: var(--text-muted); }
+.top5-delta { flex: 0 0 auto; min-width: 70px; text-align: right; }
 
 /* ---------- Resumen Mensual (comparación año contra año) ---------- */
 .yoy-legend { display: flex; gap: 18px; align-items: center; font-size: 12.5px; color: var(--text-muted); margin: 0 0 12px; }
